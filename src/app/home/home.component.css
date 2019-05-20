@@ -1,0 +1,160 @@
+/* section */
+section.principal
+{
+	width: 100%;
+	height: 500px;
+	text-align: center;
+	background-size: cover;
+	background-image: url(../../assets/img/background-header.jpg);
+}
+
+section.principal h1,
+section.principal h2
+{
+	color: #ffffff;
+	font-weight: bold;
+}
+
+section.principal h1,
+section.principal h2
+{
+	text-shadow: 2px 2px 1px black;
+}
+
+article.search-area
+{
+	padding-top: 150px;
+}
+
+div.search-content
+{
+	width: 30%;
+    height: 60px;
+    margin: 40px auto;
+    min-width: 580px;
+    position: relative;
+    background: #fff;
+}
+
+div.search-content input
+{
+	left: 15px;
+	width: 90%;
+	border: none;
+	height: 55px;
+	position: absolute;
+}
+
+div.search-content i
+{
+	right: 5px;
+    padding: 13px;
+    color: #fff;
+    font-size: 25px;
+	cursor: pointer;
+    position: absolute;
+    margin: 5px 0 0 10px;
+    background: #57897d;
+}
+
+
+/* main e nav */
+
+main,
+nav
+{
+	background: #ece7e7;
+}
+
+main section,
+nav div
+{
+	width: 100%;
+	max-width: 980px;
+	margin: 0px auto;
+}
+
+main div.images-list img
+{
+	display: inline-block;
+	margin: 10px 5px;
+}
+
+main section.sub-section
+{
+    width: 100%;
+    height: 200px;
+}
+
+main section.sub-section article
+{
+    width: 49%;
+    display: inline-block;
+}
+
+main section.sub-section article div
+{
+    width: 49%;
+    margin: 1.4px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Caroussel */
+
+.image-caroussel
+{
+    width: 100%;
+    height: 200px;
+    max-width: 980px;
+    overflow: hidden;
+    margin: 30px auto;
+    position: relative;
+}
+
+.image-caroussel img
+{
+    margin: 0 6px;
+}
+
+.image-caroussel .inner
+{
+    left: 0px;
+    display: flex;
+    position: absolute;
+    transition: left .25s ease-out;
+}
+
+.prev i,
+.next i
+{
+    right: 0;
+    top: 50%; 
+    width: 3em;
+    height: 3em;
+    opacity: 0.5;
+    color: gray;
+    cursor: pointer;
+    padding: 0 .2em;
+    font-size: 20px;
+    line-height: 3em;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: white;
+    transform: translateY(-50%);
+    transition: opacity 1s linear;
+}
+
+.prev i
+{
+    left: 0;
+}
+
+.prev:hover i,
+.next:hover i
+{
+    opacity: 1;
+}
