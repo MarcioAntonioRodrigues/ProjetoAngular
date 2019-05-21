@@ -1,0 +1,78 @@
+section.principal
+{
+    top: 15%;
+    width: 100%;
+    max-width: 980px;
+    text-align: center;
+    position: absolute;
+    left: calc(50% - 490px);
+}
+
+section.principal img
+{
+    width: 300px;
+}
+
+section.principal label, 
+section.principal input
+{
+    display: block;
+    margin: 10px 0;
+}
+
+section.principal div
+{
+    width: 250px;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+section.principal input
+{
+    height: 30px;
+    width: 245px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+section.principal form
+{
+    width: 320px;
+    height: 250px;
+    margin: 10px auto;
+    text-align: left;
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+section.principal article
+{
+    width: 320px;
+    height: 60px;
+    margin: 10px auto;
+    text-align: center;
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,.2);    
+}
+
+section.principal article p
+{
+    margin-top: 18px;
+}
+
+section.principal article p a
+{
+    color: #57897d;
+    text-decoration: none;
+}
+
+.mat-flat-button:not([class*=mat-elevation-z]), 
+.mat-stroked-button:not([class*=mat-elevation-z])
+{
+    width: 100%;
+    color: #fff;
+    margin-top: 10px;
+    background: #57897d;
+}
