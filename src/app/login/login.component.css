@@ -10,7 +10,8 @@ section.principal
 
 section.principal img
 {
-    width: 300px;
+	width: 150px;
+	margin-bottom: 20px;
 }
 
 section.principal label, 

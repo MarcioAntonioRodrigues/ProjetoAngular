@@ -7,6 +7,10 @@ section.principal
 	background-size: cover;
 	background-image: url(../../assets/img/background-header.jpg);
 }
+section.principal img
+{
+	margin-bottom: 40px;
+}
 
 section.principal h1,
 section.principal h2
@@ -18,7 +22,12 @@ section.principal h2
 section.principal h1,
 section.principal h2
 {
-	text-shadow: 2px 2px 1px black;
+	text-shadow:
+    3px 3px 0 #000,
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
 }
 
 article.search-area
@@ -31,7 +40,7 @@ div.search-content
 	width: 30%;
     height: 60px;
     min-width: 580px;
-    margin: 40px auto;
+    margin: 10px auto;
     position: relative;
 	background: #fff;
 	border-radius: 5px;
