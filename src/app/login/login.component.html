@@ -3,10 +3,10 @@
 	<form action="">
 		<div>
 			<label for="">Username ou e-mail</label>
-			<input type="text">
+			<input [(ngModel)]="usuario.nome" name="username" type="text">
 			<label for="">Senha</label>
-			<input type="password">
-			<a mat-flat-button>Entrar</a>
+			<input [(ngModel)]="usuario.senha" name="senha" type="password">
+			<button mat-flat-button (click)="login()">Entrar</button>
 		</div>
 	</form>
 	<article>

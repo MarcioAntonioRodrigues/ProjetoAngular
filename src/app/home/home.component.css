@@ -12,23 +12,23 @@ section.principal img
 	margin-bottom: 40px;
 }
 
-section.principal h1,
-section.principal h2
+section.principal h1
 {
-	color: #ffffff;
+    font-size: 50px;
+    color: #ffffff;
 	font-weight: bold;
+    text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px  1px 0 #000,
+    1px  1px 0 #000;
+    margin-bottom: 100px;
 }
 
-section.principal h1,
-section.principal h2
-{
-	text-shadow:
-    3px 3px 0 #000,
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-   -1px  1px 0 #000,
-    1px  1px 0 #000;
-}
+
+
+
 
 article.search-area
 {
@@ -74,7 +74,6 @@ div.search-content i:hover
 	background: #c19f62;
 }
 
-
 /* main e nav */
 
 nav
@@ -86,12 +85,6 @@ nav
 nav a
 {
 	margin: 10px;
-}
-
-main,
-nav
-{
-	background: #ece7e7;
 }
 
 main section,

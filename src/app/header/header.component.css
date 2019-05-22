@@ -27,16 +27,21 @@ li
 	margin-left: 30px;
 }
 
+li i
+{
+	font-size: 25px;
+}
+
 div.logo
 {
-	top: 15px;
+	top: 3px;
 	left: 100px;
 	position: absolute;
 }
 
 div.logo img
 {
-	width:150px;
+	width:180px;
 }
 
 div.logo p
