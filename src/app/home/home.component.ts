@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 declare var $: any;
 
 @Component({
@@ -13,9 +13,11 @@ export class HomeComponent
 	caroussels = document.getElementsByClassName('image-caroussel');
 	time: number = 6000;
 	bigPosterindex = 0;
+	showMenuFooter: boolean;
 
 	constructor()
-	{ }
+	{ 
+	}
 
 	ngOnInit()
 	{

@@ -1,27 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './login/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit
+export class AppComponent
 {
-  showMenuFooter:boolean = false;
+  showMenuFooter: boolean = false;
   title = 'blocoProject';
 
-  constructor(private authService: AuthService)
-  {
+  constructor(private router: Router){ }
 
-  }
-
-  ngOnInit()
-  {
-    this.authService.showMenuFooterEmitter.subscribe()
-    {
-      show => this.showMenuFooter = show;
-    }
-    console.log(this.showMenuFooter)
+  currentRouteIsLogin() {
+    return this.router.url.trim() === '/' || this.router.url.trim() === '';
   }
 }

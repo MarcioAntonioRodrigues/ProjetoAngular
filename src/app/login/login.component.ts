@@ -14,15 +14,11 @@ export class LoginComponent implements OnInit
 
 	constructor(private authService: AuthService){}
 
-	ngOnInit()
-	{
-
-	}
+	ngOnInit() {	}
 
 	login()
 	{
 		this.authService.login(this.usuario);
-		console.log(this.usuario);
 	}
 	
 }
