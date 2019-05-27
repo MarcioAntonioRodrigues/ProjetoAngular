@@ -1,7 +1,7 @@
 footer
 {
 	width: 100%;
-	background: #d6d8da;
+	background: #50525f;
 }
 
 footer div 
@@ -29,11 +29,13 @@ footer div section:last-child p
 {
 	margin-top: 5px;
 	font-size: .7rem;
+	color: #bdcadb;
 }
 
 footer div section h2
 {
 	font-size: 1.3rem;
+	color: #fff;
 }
 
 footer div section p a
@@ -60,7 +62,7 @@ footer div section ul li
 
 footer div section ul li a
 {
-	color: #4c5a64;
+	color: #bdcadb;
 	text-decoration: none;
 }
 
@@ -73,27 +75,7 @@ footer div section ul.social li
 
 footer div section ul.social li a i
 {
-	color: #1da1f2;
-}
-
-footer div section ul.social li a[href*="http://www.facebook.com"] i
-{
-	color: #4267B2;
-}
-
-footer div section ul.social li a[href*="http://www.instagram.com"] i
-{
-	color: #da9c49;
-}
-
-footer div section ul.social li a[href*="http://www.google.com"] i
-{
-	color: #b35a4a;
-}
-
-footer div section ul.social li a[href*="http://www.twitter.com"] i
-{
-	color: #1da1f2;
+	color: #bdcadb;
 }
 
 footer div section ul.credit-card li
@@ -101,6 +83,7 @@ footer div section ul.credit-card li
 	width: 32px;
 	text-indent: -9999px;
 	display: inline-block;
+	margin: 0 2px;
 }
 
 footer div section ul.credit-card li[value*="cirrus"]

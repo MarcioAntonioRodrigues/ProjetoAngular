@@ -8,10 +8,9 @@ section.principal
     left: calc(50% - 490px);
 }
 
-section.principal img
+section.principal h1
 {
-	width: 150px;
-	margin-bottom: 20px;
+	color: #2e97fc;
 }
 
 section.principal label, 
@@ -19,6 +18,7 @@ section.principal input
 {
     display: block;
     margin: 10px 0;
+    color: #50525f;
 }
 
 section.principal div
@@ -61,11 +61,12 @@ section.principal article
 section.principal article p
 {
     margin-top: 18px;
+    color: #50525f;
 }
 
 section.principal article p a
 {
-    color: #57897d;
+    color: #2e97fc;
     text-decoration: none;
 }
 
@@ -75,5 +76,5 @@ section.principal article p a
     width: 100%;
     color: #fff;
     margin-top: 10px;
-    background: #57897d;
+    background: #ea4a4b;
 }
