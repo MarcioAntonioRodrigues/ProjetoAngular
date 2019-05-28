@@ -120,11 +120,12 @@ div.search-content input
 
 div.search-content button
 {
-    right: -1px;
-    top: -2px;
+	top: -1px;
+	right: -1px;
+    border: none;
     color: #fff;
     font-size: 12px;
-    padding: 13px 50px;
+    padding: 14px 50px;
     position: absolute;
     border-radius: 0 5px 5px 0;
     background-color: #2e97fc;
@@ -192,7 +193,6 @@ main section.sub-section article div
 
 /* Caroussel */
 
-.image-caroussel,
 .image-destak
 {
     width: 100%;
@@ -203,24 +203,12 @@ main section.sub-section article div
     position: relative;
 }
 
-.image-caroussel h2
-{
-    margin: 20px 0;
-}
-
-.image-caroussel img
-{
-    margin: 0 6px;
-    border-radius: 10px;
-}
-
 .image-destak
 {
     max-width: 980px;
     height: 300px;
 }
 
-.image-caroussel .inner,
 .image-destak .destakInner
 {
     left: 0px;
@@ -263,7 +251,8 @@ main section.sub-section article div
     padding: 10px;
     font-size: 10px;
     margin-top: 50px;
-    border-radius: 5px;
+	border-radius: 5px;
+	border-style: groove;
     background: #ffffff;
 }
 
@@ -326,46 +315,4 @@ main section.sub-section article div
 .next:hover i
 {
     opacity: 1;
-}
-
-.most-search .prev i,
-.most-search .next i
-{
-    right: 0;
-    top: 40px;
-    width: 1.5em;
-    height: 1.5em;
-    opacity: 0.5;
-    color: gray;
-    cursor: pointer;
-    padding: 0 .2em;
-    font-size: 15px;
-    line-height: 1.5em;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid;
-    position: absolute;
-    box-sizing: border-box;
-    background-color: white;
-    transform: translateY(-50%);
-    transition: opacity 1s linear;
-    -webkit-transform: translateY(-50%);
-}
-
-.most-search .prev i
-{
-    right:  30px;
-}
-
-.most-search p
-{
-    margin: 0 20px;
-    border-bottom: 1px solid #50525f;
-}
-
-.most-search p span
-{
-    font-size: 12px;
-    color: #2e97fc;
 }

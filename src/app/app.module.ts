@@ -16,6 +16,7 @@ import 'hammerjs';
 import { AuthService } from './services/auth.service';
 import { EventsService } from './services/events.service';
 import { DetailComponent } from './detail/detail.component';
+import { CarousselComponent } from './caroussel/caroussel.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DetailComponent } from './detail/detail.component';
 	LoginComponent,
 	HeaderComponent,
 	FooterComponent,
-	DetailComponent
+	DetailComponent,
+	CarousselComponent
   ],
   imports: [
     BrowserModule,

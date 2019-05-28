@@ -12,7 +12,6 @@ article.search-area
 }
 
 /* div search-content */
-
 div.search-content
 {
 	width: 100%;
@@ -36,11 +35,12 @@ div.search-content input
 
 div.search-content button
 {
-    right: -1px;
-    top: -2px;
+    top: -1px;
+	right: -1px;
+    border: none;
     color: #fff;
     font-size: 12px;
-    padding: 13px 50px;
+    padding: 14px 50px;
     position: absolute;
     border-radius: 0 5px 5px 0;
     background-color: #2e97fc;
@@ -59,185 +59,4 @@ main section
 	max-width: 980px;
     margin: 0px auto;
     height: 300px;
-}
-
-/* caroussel */
-/* Caroussel */
-
-.image-caroussel,
-.image-destak
-{
-    width: 100%;
-    height: 200px;
-    max-width: 980px;
-    overflow: hidden;
-    margin: 30px auto;
-    position: relative;
-}
-
-.image-caroussel h2
-{
-    margin: 20px 0;
-}
-
-.image-caroussel img
-{
-    margin: 0 6px;
-    border-radius: 10px;
-}
-
-.image-destak
-{
-    max-width: 980px;
-    height: 300px;
-}
-
-.image-caroussel .inner,
-.image-destak .destakInner
-{
-    left: 0px;
-    display: flex;
-    position: absolute;
-    transition: left .25s ease-out;
-}
-.image-destak .destakInner img
-{
-    margin-bottom: 0;
-}
-
-.image-destak .destakInner div
-{
-    display: flex;
-    margin: 0 10px;
-    border: 1px solid #ccc;
-}
-
-.image-destak .destakInner div h2
-{
-    color: #50525f;
-    margin-top: 20px;
-}
-
-.image-destak .destakInner div span
-{
-    width: 465px;
-    background-color: #fff;
-}
-
-.image-destak p.event-name
-{
-    margin-top: 60px;
-}
-
-.image-destak button
-{
-    width: 275px;
-    padding: 10px;
-    font-size: 10px;
-    margin-top: 50px;
-    border-radius: 5px;
-    background: #ffffff;
-}
-
-.image-destak .calendar
-{
-    width: 60px;
-    margin-top: 50px;
-    margin-left: 20px;
-    border: 1px solid rgba(0,0,0,0.2);
-    border-radius: 5px;
-    position: absolute;
-}
-
-.image-destak .calendar p
-{
-    color: #fff;
-    font-size: 12px;
-    background: #ea4a4b;
-    border-radius: 5px 5px 0 0;
-}
-
-.image-destak .calendar p:nth-child(2)
-{
-    font-size: 22px;
-    color: #50525f;
-    border-radius: 5px;
-    background: #fff;
-}
-
-.prev i,
-.next i
-{
-    right: 0;
-    top: 50%; 
-    width: 3em;
-    height: 3em;
-    opacity: 0.5;
-    color: gray;
-    cursor: pointer;
-    border: 1px solid;
-    padding: 0 .2em;
-    font-size: 20px;
-    line-height: 3em;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 50%;
-    position: absolute;
-    box-sizing: border-box;
-    background-color: white;
-    transform: translateY(-50%);
-    transition: opacity 1s linear;
-}
-
-.prev.destak-prev i
-{
-    left: 7px;
-}
-
-.prev:hover i,
-.next:hover i
-{
-    opacity: 1;
-}
-
-.most-search .prev i,
-.most-search .next i
-{
-    right: 0;
-    top: 40px;
-    width: 1.5em;
-    height: 1.5em;
-    opacity: 0.5;
-    color: gray;
-    cursor: pointer;
-    padding: 0 .2em;
-    font-size: 15px;
-    line-height: 1.5em;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid;
-    position: absolute;
-    box-sizing: border-box;
-    background-color: white;
-    transform: translateY(-50%);
-    transition: opacity 1s linear;
-    -webkit-transform: translateY(-50%);
-}
-
-.most-search .prev i
-{
-    right:  30px;
-}
-
-.most-search p
-{
-    margin: 0 20px;
-    border-bottom: 1px solid #50525f;
-}
-
-.most-search p span
-{
-    font-size: 12px;
-    color: #2e97fc;
 }

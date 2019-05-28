@@ -11,6 +11,8 @@ export class DetailComponent
 {
 	mostSearch:any = [];
 	newEvents: any = [];
+	titleMostSearch = "Mais buscados"
+
 	constructor(eventsService:EventsService)
 	{
 		this.mostSearch = eventsService.mostSearch;
