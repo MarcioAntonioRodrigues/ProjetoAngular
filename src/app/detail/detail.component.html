@@ -1,0 +1,50 @@
+<section class="principal">
+    <article class="search-area">
+        <div class="search-content">
+            <input type="search" placeholder="Pesquisar eventos">
+            <button>BUSCAR</button>
+        </div>
+    </article>
+</section>
+<main>
+    <section class="image-caroussel most-search">
+        <h2>
+            Mais buscados
+        </h2>
+        <div class="inner">
+            <article *ngFor="let most of mostSearch">
+                <span>
+                    <img src="{{most.img}}" alt="">
+                    <p>{{most.dia}}<span> {{most.mes}} {{most.hora}}</span></p>
+                    <p>{{most.titulo}}</p>
+                </span>
+            </article>
+        </div>
+        <div class="next">
+            <i class="fa fa-chevron-right"></i>
+        </div>
+        <div class="prev">
+            <i class="fa fa-chevron-left"></i>
+        </div>
+    </section>
+    <section class="image-caroussel most-search">
+        <h2>
+            Novidades para você
+        </h2>
+        <div class="inner">
+            <article *ngFor="let new of newEvents">
+                <span>
+                    <img src="{{new.img}}" alt="">
+                    <p>{{new.dia}}<span> {{new.mes}} {{new.hora}}</span></p>
+                    <p>{{new.titulo}}</p>
+                </span>
+            </article>
+        </div>
+        <div class="next">
+            <i class="fa fa-chevron-right"></i>
+        </div>
+        <div class="prev">
+            <i class="fa fa-chevron-left"></i>
+        </div>
+    </section>
+</main>

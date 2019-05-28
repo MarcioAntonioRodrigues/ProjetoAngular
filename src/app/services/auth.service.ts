@@ -1,5 +1,5 @@
 import { Injectable} from '@angular/core';
-import { Usuario } from './Usuario';
+import { Usuario } from '../login/Usuario';
 import { Router } from '@angular/router';
 
 @Injectable()
@@ -11,7 +11,7 @@ export class AuthService
 	login(usuario: Usuario)
 	{
 		console.log(usuario)
-        if(usuario.nome == 'luciana.admin' && usuario.senha == 'bliveti')
+        if(usuario.nome == 'marcio.admin' && usuario.senha == '12345')
         {
             this.router.navigate(['/home']);
         }

@@ -13,7 +13,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import 'hammerjs';
 
-import { AuthService } from './login/auth.service';
+import { AuthService } from './services/auth.service';
+import { EventsService } from './services/events.service';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { AuthService } from './login/auth.service';
 	HomeComponent,
 	LoginComponent,
 	HeaderComponent,
-	FooterComponent
+	FooterComponent,
+	DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { AuthService } from './login/auth.service';
 		FormsModule
   ],
   providers: [
-		AuthService
+		AuthService,
+		EventsService
 	],
   bootstrap: [AppComponent]
 })

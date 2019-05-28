@@ -1,101 +1,93 @@
 <section class="principal">
 	<article class="search-area">
-		<h1><span>Milhares de eventos.</span> Viva momentos de emoção.</h1>
+		<h1>Seu evento preferido ao alcance de um clique.</h1>
 		<div class="search-content">
 			<input type="search" placeholder="Pesquisar eventos">
-			<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
 			<button>BUSCAR</button>
 		</div>
 	</article>
 	<article class="eventos">
-		<!-- <h2>
-			Encontre seus eventos favoritos
-		</h2> -->
 		<ul>
-			<li>
+			<li [routerLink]="['/detalhes']">
 				<i class="fa fa-music"></i>
 				<p>Shows</p>
 			</li>
-			<li>
+			<li [routerLink]="['/detalhes']">
 				<img src="../assets/icons/theatre.svg" alt="">
 				<p>Teatro</p>
 			</li>
-			<li>
+			<li [routerLink]="['/detalhes']">
 				<i class="fa fa-cutlery" aria-hidden="true"></i>
 				<p>Gastronomia</p>
 			</li>
-			<li>
+			<li [routerLink]="['/detalhes']">
 				<i class="fa fa-film" aria-hidden="true"></i>
 				<p>Cinema</p>
 			</li>
-			<li>
+			<li [routerLink]="['/detalhes']">
 				<i class="fa fa-futbol-o" aria-hidden="true"></i>
 				<p>Esportes</p>
 			</li>
-			<li>
+			<li [routerLink]="['/detalhes']">
 				<i class="fa fa-star" aria-hidden="true"></i>
 				<p>Destaques</p>
 			</li>
 		</ul>
 	</article>
 	<article class="image-destak">
-			<div class="destakInner">
-				<div>
-					<img src="assets/img/destaque-1.jpg" alt="">
-					<span>
-						<h2>FESTIVAL DE HEAVY METAL RIO DE JANEIRO 2019</h2>
-						<article class="calendar"><p>DEZ</p><p>7</p></article>
-						<p class="event-name">CITY BANK HALL</p>
-						<button>VER DETALHES</button>
-					</span>
-				</div>
-				<div>
-					<img src="assets/img/destaque-1.jpg" alt="">
-					<span>
-						<h2>FESTIVAL DE HEAVY METAL RIO DE JANEIRO 2019</h2>
-						<article class="calendar"><p>DEZ</p><p>7</p></article>
-						<p class="event-name">CITY BANK HALL</p>
-						<button>VER DETALHES</button>
-					</span>
-				</div>
-				<div>
-					<img src="assets/img/destaque-1.jpg" alt="">
-					<span>
-						<h2>LOLLAPALLOZA 2019 EDIÇÃO ESPECIAL</h2>
-						<article class="calendar"><p>DEZ</p><p>7</p></article>
-						<p class="event-name">CITY BANK HALL</p>
-						<button>VER DETALHES</button>
-					</span>
-				</div>
-				<div>
-					<img src="assets/img/destaque-1.jpg" alt="">
-					<span>
-						<h2>LOLLAPALLOZA 2019 EDIÇÃO ESPECIAL</h2>
-						<article class="calendar"><p>DEZ</p><p>7</p></article>
-						<p class="event-name">CITY BANK HALL</p>
-						<button>VER DETALHES</button>
-					</span>
-				</div>
-				<div>
-					<img src="assets/img/destaque-1.jpg" alt="">
-					<span>
-						<h2>LOLLAPALLOZA 2019 EDIÇÃO ESPECIAL</h2>
-						<article class="calendar"><p>DEZ</p><p>7</p></article>
-						<p class="event-name">CITY BANK HALL</p>
-						<button>VER DETALHES</button>
-					</span>
-				</div>
+		<div class="destakInner">
+			<div>
+				<img src="assets/img/destaque-1.jpg" alt="">
+				<span>
+					<h2>FESTIVAL DE HEAVY METAL RIO DE JANEIRO 2019</h2>
+					<article class="calendar"><p>DEZ</p><p>7</p></article>
+					<p class="event-name">CITY BANK HALL</p>
+					<button>VER DETALHES</button>
+				</span>
 			</div>
-			<div class="next">
-				<i class="fa fa-chevron-right"></i>
+			<div>
+				<img src="assets/img/destaque-1.jpg" alt="">
+				<span>
+					<h2>FESTIVAL DE HEAVY METAL RIO DE JANEIRO 2019</h2>
+					<article class="calendar"><p>DEZ</p><p>7</p></article>
+					<p class="event-name">CITY BANK HALL</p>
+					<button>VER DETALHES</button>
+				</span>
 			</div>
-			<div class="prev destak-prev">
-				<i class="fa fa-chevron-left"></i>
+			<div>
+				<img src="assets/img/destaque-1.jpg" alt="">
+				<span>
+					<h2>LOLLAPALLOZA 2019 EDIÇÃO ESPECIAL</h2>
+					<article class="calendar"><p>DEZ</p><p>7</p></article>
+					<p class="event-name">CITY BANK HALL</p>
+					<button>VER DETALHES</button>
+				</span>
 			</div>
-		<!-- <figure id="backgroundFigure">
-			<img id="bigPoster" alt="Filme Missão impossível">
-			<figcaption></figcaption>
-		</figure> -->
+			<div>
+				<img src="assets/img/destaque-1.jpg" alt="">
+				<span>
+					<h2>LOLLAPALLOZA 2019 EDIÇÃO ESPECIAL</h2>
+					<article class="calendar"><p>DEZ</p><p>7</p></article>
+					<p class="event-name">CITY BANK HALL</p>
+					<button>VER DETALHES</button>
+				</span>
+			</div>
+			<div>
+				<img src="assets/img/destaque-1.jpg" alt="">
+				<span>
+					<h2>LOLLAPALLOZA 2019 EDIÇÃO ESPECIAL</h2>
+					<article class="calendar"><p>DEZ</p><p>7</p></article>
+					<p class="event-name">CITY BANK HALL</p>
+					<button>VER DETALHES</button>
+				</span>
+			</div>
+		</div>
+		<div class="next">
+			<i class="fa fa-chevron-right"></i>
+		</div>
+		<div class="prev destak-prev">
+			<i class="fa fa-chevron-left"></i>
+		</div>
 	</article>
 </section>
 <main>
@@ -104,46 +96,13 @@
 			Mais buscados
 		</h2>
 		<div class="inner">
-			<span>
-				<img src="assets/img/show-9.jpg" alt="">
-				<p>23<span> maio 20:00</span></p>
-				<p>Rock in Rio 2019</p>
-			</span>
-			<span>
-				<img src="assets/img/show-10.jpg" alt="">
-				<p>23<span> maio 20:00</span></p>
-				<p>Rock in Rio 2019</p>
-			</span>
-			<span>
-				<img src="assets/img/show-11.jpg" alt="">
-				<p>23<span> maio 20:00</span></p>
-				<p>Rock in Rio 2019</p>
-			</span>
-			<span>
-				<img src="assets/img/show-12.jpg" alt="">
-				<p>23<span> maio 20:00</span></p>
-				<p>Rock in Rio 2019</p>
-			</span>
-			<span>
-				<img src="assets/img/show-9.jpg" alt="">
-				<p>23<span> maio 20:00</span></p>
-				<p>Rock in Rio 2019</p>
-			</span>
-			<span>
-				<img src="assets/img/show-10.jpg" alt="">
-				<p>23<span> maio 20:00</span></p>
-				<p>Rock in Rio 2019</p>
-			</span>
-			<span>
-				<img src="assets/img/show-11.jpg" alt="">
-				<p>23<span> maio 20:00</span></p>
-				<p>Rock in Rio 2019</p>
-			</span>
-			<span>
-				<img src="assets/img/show-12.jpg" alt="">
-				<p>23<span> maio 20:00</span></p>
-				<p>Rock in Rio 2019</p>
-			</span>
+			<article *ngFor="let most of mostSearch">
+				<span>
+					<img src="{{most.img}}" alt="">
+					<p>{{most.dia}}<span> {{most.mes}} {{most.hora}}</span></p>
+					<p>{{most.titulo}}</p>
+				</span>
+			</article>
 		</div>
 		<div class="next">
 			<i class="fa fa-chevron-right"></i>
@@ -152,61 +111,26 @@
 			<i class="fa fa-chevron-left"></i>
 		</div>
 	</section>
-
 	<section class="image-caroussel most-search">
-			<h2>
-				Novidades para você
-			</h2>
-			<div class="inner">
+		<h2>
+			Novidades para você
+		</h2>
+		<div class="inner">
+			<article *ngFor="let new of newEvents">
 				<span>
-					<img src="assets/img/show-1.jpg" alt="">
-					<p>23<span> maio 20:00</span></p>
-					<p>Rock in Rio 2019</p>
+					<img src="{{new.img}}" alt="">
+					<p>{{new.dia}}<span> {{new.mes}} {{new.hora}}</span></p>
+					<p>{{new.titulo}}</p>
 				</span>
-				<span>
-					<img src="assets/img/show-2.jpg" alt="">
-					<p>23<span> maio 20:00</span></p>
-					<p>Rock in Rio 2019</p>
-				</span>
-				<span>
-					<img src="assets/img/show-3.jpg" alt="">
-					<p>23<span> maio 20:00</span></p>
-					<p>Rock in Rio 2019</p>
-				</span>
-				<span>
-					<img src="assets/img/show-4.jpg" alt="">
-					<p>23<span> maio 20:00</span></p>
-					<p>Rock in Rio 2019</p>
-				</span>
-				<span>
-					<img src="assets/img/show-1.jpg" alt="">
-					<p>23<span> maio 20:00</span></p>
-					<p>Rock in Rio 2019</p>
-				</span>
-				<span>
-					<img src="assets/img/show-2.jpg" alt="">
-					<p>23<span> maio 20:00</span></p>
-					<p>Rock in Rio 2019</p>
-				</span>
-				<span>
-					<img src="assets/img/show-3.jpg" alt="">
-					<p>23<span> maio 20:00</span></p>
-					<p>Rock in Rio 2019</p>
-				</span>
-				<span>
-					<img src="assets/img/show-4.jpg" alt="">
-					<p>23<span> maio 20:00</span></p>
-					<p>Rock in Rio 2019</p>
-				</span>
-			</div>
-			<div class="next">
-				<i class="fa fa-chevron-right"></i>
-			</div>
-			<div class="prev">
-				<i class="fa fa-chevron-left"></i>
-			</div>
-		</section>
-
+			</article>
+		</div>
+		<div class="next">
+			<i class="fa fa-chevron-right"></i>
+		</div>
+		<div class="prev">
+			<i class="fa fa-chevron-left"></i>
+		</div>
+	</section>
 	<section class="sub-section">
 		<article>
 			<h2>Eventos</h2>
