@@ -3,12 +3,12 @@ import { Injectable} from '@angular/core';
 @Injectable()
 export class EventsService 
 {
-    mostSearch:any = [];
-	newEvents: any = [];
+    filmes:any = [];
+	pecas: any = [];
 	bestEvents:any = [];
     constructor()
     {
-        this.mostSearch = [
+        this.filmes = [
             { img: 'assets/img/show-9.jpg', dia: '23', mes: 'maio', hora:'20:00', titulo: 'Rock in Rio' },
             { img: 'assets/img/show-10.jpg', dia: '23', mes: 'maio', hora:'22:00', titulo: 'Rock in Rio' },
             { img: 'assets/img/show-11.jpg', dia: '23', mes: 'maio', hora:'21:00', titulo: 'Rock in Rio' },
@@ -18,7 +18,7 @@ export class EventsService
             { img: 'assets/img/show-11.jpg', dia: '23', mes: 'maio', hora:'18:00', titulo: 'Rock in Rio' },
             { img: 'assets/img/show-12.jpg', dia: '23', mes: 'maio', hora:'20:00', titulo: 'Rock in Rio' }
         ];
-        this.newEvents = [
+        this.pecas = [
             { img: 'assets/img/show-1.jpg', dia: '23', mes: 'maio', hora:'20:00', titulo: 'Rock in Rio' },
             { img: 'assets/img/show-2.jpg', dia: '23', mes: 'maio', hora:'22:00', titulo: 'Rock in Rio' },
             { img: 'assets/img/show-3.jpg', dia: '23', mes: 'maio', hora:'21:00', titulo: 'Rock in Rio' },

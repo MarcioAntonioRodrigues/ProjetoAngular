@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { EventsService } from '../services/events.service';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-home',
@@ -9,17 +10,22 @@ import { EventsService } from '../services/events.service';
 
 export class HomeComponent 
 {
-	mostSearch:any = [];
-	newEvents: any = [];
+	filmes:any = [];
+	pecas: any = [];
 	bestEvents:any = [];
-	titleMostSearch = "Mais buscados"
-	titleNewEvents = "Novidades para você";
+	tituloFilmes = "Cinema"
+	tituloPecas = "Teatro";
 	showMenuFooter: boolean;
 
-	constructor(eventsService:EventsService)
+	constructor(eventsService:EventsService, private router: Router)
 	{
-		this.mostSearch = eventsService.mostSearch;
-		this.newEvents = eventsService.newEvents;
+		this.filmes = eventsService.filmes;
+		this.pecas = eventsService.pecas;
 		this.bestEvents = eventsService.bestEvents;
+	}
+
+	goToEvent(categoria)
+	{
+		this.router.navigate(['/categorias', categoria]);
 	}
 }

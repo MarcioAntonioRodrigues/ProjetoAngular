@@ -8,27 +8,27 @@
 	</article>
 	<article class="eventos">
 		<ul>
-			<li [routerLink]="['/detalhes']">
+			<li (click)="goToEvent('shows')">
 				<i class="fa fa-music"></i>
 				<p>Shows</p>
 			</li>
-			<li [routerLink]="['/detalhes']">
+			<li (click)="goToEvent('teatro')">
 				<img src="../assets/icons/theatre.svg" alt="">
 				<p>Teatro</p>
 			</li>
-			<li [routerLink]="['/detalhes']">
+			<li (click)="goToEvent('gastronomia')">
 				<i class="fa fa-cutlery" aria-hidden="true"></i>
 				<p>Gastronomia</p>
 			</li>
-			<li [routerLink]="['/detalhes']">
+			<li (click)="goToEvent('cinema')">
 				<i class="fa fa-film" aria-hidden="true"></i>
 				<p>Cinema</p>
 			</li>
-			<li [routerLink]="['/detalhes']">
+			<li (click)="goToEvent('esportes')">
 				<i class="fa fa-futbol-o" aria-hidden="true"></i>
 				<p>Esportes</p>
 			</li>
-			<li [routerLink]="['/detalhes']">
+			<li (click)="goToEvent('destaques')">
 				<i class="fa fa-star" aria-hidden="true"></i>
 				<p>Destaques</p>
 			</li>
@@ -57,8 +57,8 @@
 	</article>
 </section>
 <main>
-	<app-caroussel [carousselItems]="mostSearch" [titleCategory]="titleMostSearch"></app-caroussel>
-	<app-caroussel [carousselItems]="newEvents" [titleCategory]="titleNewEvents"></app-caroussel>
+	<app-caroussel [carousselItems]="filmes" [titleCategory]="tituloFilmes"></app-caroussel>
+	<app-caroussel [carousselItems]="pecas" [titleCategory]="tituloPecas"></app-caroussel>
 	<section class="sub-section">
 		<article>
 			<h2>Eventos</h2>
