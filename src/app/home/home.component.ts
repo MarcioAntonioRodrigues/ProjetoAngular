@@ -13,8 +13,8 @@ export class HomeComponent
 	filmes:any = [];
 	pecas: any = [];
 	bestEvents:any = [];
-	tituloFilmes = "Cinema"
 	tituloPecas = "Teatro";
+	tituloFilmes = "Cinema";
 	showMenuFooter: boolean;
 
 	constructor(eventsService:EventsService, private router: Router)

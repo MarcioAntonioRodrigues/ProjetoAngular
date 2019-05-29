@@ -60,7 +60,7 @@ article.eventos ul li
 
 article.eventos ul li:hover
 {
-    transform: scale(1.1)
+    transform: scale(1.1);
 }
 
 article.eventos ul li img

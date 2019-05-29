@@ -8,5 +8,13 @@
 </section>
 <main>
 	<app-caroussel [carousselItems]="listaCategoria" [titleCategory]="titulo"></app-caroussel>
-	<!-- <app-caroussel [carousselItems]="pecas" [titleCategory]="tituloPecas"></app-caroussel> -->
+	<div class="category-list">
+		<section *ngFor="let item of listaCategoria">
+			<span (click)="goToEvent(item)">
+				<img src="{{item.img}}" alt="">
+				<p>{{item.dia}}<span> {{item.mes}} {{item.hora}}</span></p>
+				<p>{{item.titulo}}</p>
+			</span>
+		</section>
+	</div>
 </main>

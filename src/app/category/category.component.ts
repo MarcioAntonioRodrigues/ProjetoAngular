@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsService } from '../services/events.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
 	selector: 'app-category',
@@ -18,7 +18,7 @@ export class CategoryComponent implements OnInit
 	listaCategoria = [];
 	eventsService:EventsService;
 
-	constructor(eventsService:EventsService, private route: ActivatedRoute)
+	constructor(eventsService:EventsService, private route: ActivatedRoute, private router: Router)
 	{
 		this.filmes = eventsService.filmes;
 		this.pecas = eventsService.pecas;
@@ -30,7 +30,6 @@ export class CategoryComponent implements OnInit
 			this.categoria = obj.categoria;
 		});
 		this.getCategoria();
-
 	}
 
 	getCategoria()
@@ -45,5 +44,12 @@ export class CategoryComponent implements OnInit
 			this.listaCategoria = this.pecas;
 			this.titulo = "Teatro";
 		}
+	}
+
+	goToEvent(evento)
+	{
+		this.router.navigate(['/detalhes'], 
+		{queryParams: evento});
+		// this.router.navigate(['/detalhes', evento]);
 	}
 }

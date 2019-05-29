@@ -11,12 +11,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { CategoryComponent } from './category/category.component';
+import { CarousselComponent } from './caroussel/caroussel.component';
 import 'hammerjs';
 
 import { AuthService } from './services/auth.service';
 import { EventsService } from './services/events.service';
-import { CategoryComponent } from './category/category.component';
-import { CarousselComponent } from './caroussel/caroussel.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,10 @@ import { CarousselComponent } from './caroussel/caroussel.component';
 	HomeComponent,
 	LoginComponent,
 	HeaderComponent,
+	DetailComponent,
 	FooterComponent,
 	CategoryComponent,
-	CarousselComponent
+	CarousselComponent,
   ],
   imports: [
     BrowserModule,

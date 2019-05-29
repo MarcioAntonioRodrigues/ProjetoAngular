@@ -1,4 +1,12 @@
 /* search-area */
+section.principal
+{
+	width: 100%;
+    height: 170px;
+	max-width: 980px;
+    margin: 0px auto;
+}
+
 article.search-area
 {
     width: 100%;
@@ -53,10 +61,40 @@ main
     background: #ffffff;
 }
 
-main section
+/* category-list */
+
+div.category-list
 {
 	width: 100%;
 	max-width: 980px;
     margin: 0px auto;
-    height: 300px;
+}
+
+div.category-list span
+{
+	cursor: pointer;
+}
+
+div.category-list section
+{
+	display: inline-block;
+	margin-bottom: 50px;
+}
+
+div.category-list section img
+{
+	margin: 0 6px;
+    border-radius: 10px;
+}
+
+div.category-list section p
+{
+	margin: 0 20px;
+    border-bottom: 1px solid #50525f;
+}
+
+div.category-list section p span
+{
+	font-size: 12px;
+    color: #2e97fc;
 }
