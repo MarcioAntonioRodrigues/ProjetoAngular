@@ -18,6 +18,7 @@ import 'hammerjs';
 import { AuthService } from './services/auth.service';
 import { EventsService } from './services/events.service';
 import { DetailComponent } from './detail/detail.component';
+import { SessionService } from './services/session.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DetailComponent } from './detail/detail.component';
   ],
   providers: [
 		AuthService,
-		EventsService
+		EventsService,
+		SessionService
 	],
   bootstrap: [AppComponent]
 })

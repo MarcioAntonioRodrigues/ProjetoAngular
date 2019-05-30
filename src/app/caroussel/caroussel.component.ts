@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-caroussel',
@@ -15,7 +16,7 @@ export class CarousselComponent
 	time: number = 6000;
 	bigPosterindex = 0;
 
-	constructor(){}
+	constructor(private router: Router){}
 
 	ngOnInit()
 	{
@@ -71,5 +72,11 @@ export class CarousselComponent
 				switchImg();
 			});
 		});
+	}
+
+	goToEvent(evento)
+	{
+		this.router.navigate(['/detalhes'], 
+		{queryParams: evento});
 	}
 }

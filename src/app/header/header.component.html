@@ -8,9 +8,15 @@
 		<li>
 			Fale conosco
 		</li>
-		<li [routerLink]="['/']">
-			<!-- <i class="fa fa-user-o"></i> -->
+		<li *ngIf="username === null" [routerLink]="['/']">
 			Login
+		 </li>
+		 <li *ngIf="username !== null" class="user-name">
+			<i class="fa fa-user-o"></i>
+			{{username}}
+		 </li>
+		 <li *ngIf="username" (click)="logout()">
+			 Sair
 		 </li>
 		<li [routerLink]="['/']">
 			Criar conta

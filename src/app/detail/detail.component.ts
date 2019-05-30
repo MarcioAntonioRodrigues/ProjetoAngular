@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsService } from '../services/events.service';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from "@angular/common";
 
 @Component({
 	selector: 'app-detail',
@@ -15,7 +16,9 @@ export class DetailComponent implements OnInit
 	evento: any;
 	eventsService:EventsService;
 
-	constructor(eventsService:EventsService, private route: ActivatedRoute)
+	constructor(eventsService:EventsService, 
+				private route: ActivatedRoute,
+				private location: Location)
 	{
 		this.filmes = eventsService.filmes;
 		this.pecas = eventsService.pecas;
@@ -28,9 +31,8 @@ export class DetailComponent implements OnInit
 		console.log(this.evento)
 	}
 
-	getEvent()
+	navigateBack()
 	{
-
+		this.location.back();
 	}
-
 }

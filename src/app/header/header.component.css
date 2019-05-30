@@ -64,3 +64,16 @@ div.logo a
 	color: #ffffff;
 	text-decoration: none;
 }
+
+li.user-name:before
+{
+	content: "";
+    width: 0;
+    height: 0;
+    float: right;
+    margin-top: 10px;
+    margin-left: 5px;
+    border-top: 5px solid #2e97fc;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}

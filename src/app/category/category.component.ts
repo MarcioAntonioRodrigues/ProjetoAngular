@@ -50,6 +50,5 @@ export class CategoryComponent implements OnInit
 	{
 		this.router.navigate(['/detalhes'], 
 		{queryParams: evento});
-		// this.router.navigate(['/detalhes', evento]);
 	}
 }

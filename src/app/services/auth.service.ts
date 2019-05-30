@@ -13,7 +13,7 @@ export class AuthService
 		console.log(usuario)
         if(usuario.nome == 'marcio.admin' && usuario.senha == '12345')
         {
-            this.router.navigate(['/home']);
+            return this.router.navigate(['/home']);
         }
 	}
 	

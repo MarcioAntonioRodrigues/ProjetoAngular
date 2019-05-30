@@ -4,7 +4,7 @@
 	</h2>
 	<div class="inner">
 		<article *ngFor="let caroussel of carousselItems">
-			<span>
+			<span (click)="goToEvent(caroussel)">
 				<img src="{{caroussel.img}}" alt="">
 				<p>{{caroussel.dia}}<span> {{caroussel.mes}} {{caroussel.hora}}</span></p>
 				<p>{{caroussel.titulo}}</p>
