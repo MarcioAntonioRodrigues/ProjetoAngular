@@ -9,14 +9,14 @@ export class EventsService
     constructor()
     {
         this.filmes = [
-            { id: 1, img: 'assets/img/show-5.jpg', dia: '13', mes: 'janeiro', hora:'20:00', titulo: 'Poderoso Chefão' },
-            { id: 2, img: 'assets/img/show-6.jpg', dia: '02', mes: 'fevereiro', hora:'22:00', titulo: 'Titanic' },
-            { id: 3, img: 'assets/img/show-7.jpg', dia: '23', mes: 'fevereiro', hora:'21:00', titulo: 'The Avengers' },
-            { id: 4, img: 'assets/img/show-8.jpg', dia: '15', mes: 'março', hora:'19:30', titulo: 'Dead Pool' },
-            { id: 5, img: 'assets/img/show-9.jpg', dia: '20', mes: 'maio', hora:'23:00', titulo: 'Jurassic Park' },
-            { id: 6, img: 'assets/img/show-10.jpg', dia: '19', mes: 'junho', hora:'00:00', titulo: 'Cavaleiros do Zodiaco' },
-            { id: 7, img: 'assets/img/show-11.jpg', dia: '05', mes: 'julho', hora:'18:00', titulo: '007 contra Golden eye' },
-            { id: 8, img: 'assets/img/show-12.jpg', dia: '14', mes: 'agosto', hora:'20:00', titulo: 'Amadeus' }
+            { id: 1, img: 'assets/img/show-5.jpg', dia: '13', mes: 'janeiro', hora:'20:00', titulo: 'Poderoso Chefão', descricao: 'Venha ver o show de stand up comedy mais famoso da zona sul do Rio! São diversos comediantes - conhecidos e também novos - se revezando no palco enquanto você curte uma cerveja gelada e excelente gastronomia. Fica no andar superior do Saloon 79 em Botafogo. Não perca!' },
+            { id: 2, img: 'assets/img/show-6.jpg', dia: '02', mes: 'fevereiro', hora:'22:00', titulo: 'Titanic', descricao: 'Venha ver o show de stand up comedy mais famoso da zona sul do Rio! São diversos comediantes - conhecidos e também novos - se revezando no palco enquanto você curte uma cerveja gelada e excelente gastronomia. Fica no andar superior do Saloon 79 em Botafogo. Não perca!' },
+            { id: 3, img: 'assets/img/show-7.jpg', dia: '23', mes: 'fevereiro', hora:'21:00', titulo: 'The Avengers', descricao: 'Venha ver o show de stand up comedy mais famoso da zona sul do Rio! São diversos comediantes - conhecidos e também novos - se revezando no palco enquanto você curte uma cerveja gelada e excelente gastronomia. Fica no andar superior do Saloon 79 em Botafogo. Não perca!' },
+            { id: 4, img: 'assets/img/show-8.jpg', dia: '15', mes: 'março', hora:'19:30', titulo: 'Dead Pool', descricao: 'Venha ver o show de stand up comedy mais famoso da zona sul do Rio! São diversos comediantes - conhecidos e também novos - se revezando no palco enquanto você curte uma cerveja gelada e excelente gastronomia. Fica no andar superior do Saloon 79 em Botafogo. Não perca!'},
+            { id: 5, img: 'assets/img/show-9.jpg', dia: '20', mes: 'maio', hora:'23:00', titulo: 'Jurassic Park', descricao: 'Venha ver o show de stand up comedy mais famoso da zona sul do Rio! São diversos comediantes - conhecidos e também novos - se revezando no palco enquanto você curte uma cerveja gelada e excelente gastronomia. Fica no andar superior do Saloon 79 em Botafogo. Não perca!' },
+            { id: 6, img: 'assets/img/show-10.jpg', dia: '19', mes: 'junho', hora:'00:00', titulo: 'Cavaleiros do Zodiaco', descricao: 'Venha ver o show de stand up comedy mais famoso da zona sul do Rio! São diversos comediantes - conhecidos e também novos - se revezando no palco enquanto você curte uma cerveja gelada e excelente gastronomia. Fica no andar superior do Saloon 79 em Botafogo. Não perca!' },
+            { id: 7, img: 'assets/img/show-11.jpg', dia: '05', mes: 'julho', hora:'18:00', titulo: '007 contra Golden eye', descricao: 'Venha ver o show de stand up comedy mais famoso da zona sul do Rio! São diversos comediantes - conhecidos e também novos - se revezando no palco enquanto você curte uma cerveja gelada e excelente gastronomia. Fica no andar superior do Saloon 79 em Botafogo. Não perca!' },
+            { id: 8, img: 'assets/img/show-12.jpg', dia: '14', mes: 'agosto', hora:'20:00', titulo: 'Amadeus', descricao: 'Venha ver o show de stand up comedy mais famoso da zona sul do Rio! São diversos comediantes - conhecidos e também novos - se revezando no palco enquanto você curte uma cerveja gelada e excelente gastronomia. Fica no andar superior do Saloon 79 em Botafogo. Não perca!' }
         ];
         this.pecas = [
             { id: 1, img: 'assets/img/show-1.jpg', dia: '23', mes: 'maio', hora:'20:00', titulo: 'Lago dos Cisnes' },
