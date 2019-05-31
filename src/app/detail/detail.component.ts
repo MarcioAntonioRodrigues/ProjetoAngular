@@ -28,11 +28,23 @@ export class DetailComponent implements OnInit
 	{
 		this.evento = this.route.queryParamMap;
 		this.evento = this.evento.source._value;
+		this.changeBackgrounImage();
 		console.log(this.evento)
 	}
 
 	navigateBack()
 	{
 		this.location.back();
+	}
+
+	changeBackgrounImage()
+	{
+		let background = document.getElementById('img-event');
+		console.log(background);
+		background.style.backgroundImage = 'url(' + this.evento.imgBkg + ')';
+		background.style.backgroundSize = 'cover';
+		// background.style.filter = 'blur(5px)';
+		background.style.width = '100%';
+		background.style.height = '400px';
 	}
 }
