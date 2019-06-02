@@ -6,8 +6,8 @@
 		<article *ngFor="let caroussel of carousselItems">
 			<span (click)="goToEvent(caroussel)">
 				<img src="{{caroussel.img}}" alt="">
-				<p>{{caroussel.dia}}<span> {{caroussel.mes}} {{caroussel.hora}}</span></p>
-				<p>{{caroussel.titulo}}</p>
+				<p>{{caroussel.titulo}}<span> {{caroussel.categoria}}</span></p>
+				<p>Classificação: {{caroussel.classificacao}}</p>
 			</span>
 		</article>
 	</div>

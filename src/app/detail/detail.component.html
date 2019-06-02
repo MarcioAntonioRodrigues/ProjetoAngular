@@ -1,28 +1,38 @@
-<div id="img-event">
-</div>
 <section class="principal">
 	<article class="info">
 		<img src="{{evento.img}}" alt="">
-		<h1>{{evento.titulo}}</h1>
-		<p>
-			<i class="fa fa-map-marker" aria-hidden="true"></i>
-			{{evento.local}}
-		</p>
-		<p>
-			<i class="fa fa-calendar" aria-hidden="true"></i>
-			{{evento.dia}} de {{evento.mes}}
-		</p>
+		<div>
+			<p (click)="navigateBack()">
+				<i class="fa fa-arrow-left" aria-hidden="true"></i>
+				Voltar
+			</p>
+			<h1>{{evento.titulo}}</h1>
+			<p>
+				Classificação <span>{{evento.classificacao}}</span><span>{{evento.duracao}} min.</span>
+			</p>
+			<ul>
+				<li *ngFor="let day of evento.data; let i = index" (click)="chosenDay = i">
+					<p [ngClass]="{'selectedDay': chosenDay == i}">{{weekDay[i]}}</p>
+					<p [ngClass]="{'selectedDay': chosenDay == i}">{{day}}</p>
+				</li>
+			</ul>
+		</div>
 	</article>
 </section>
 <section class="descricao">
 	<article>
-		<h3>
-			DESCRIÇÃO DO EVENTO
-		</h3>
-		<p>{{evento.descricao}}</p>
-		<p class="btn-back" (click)="navigateBack()">
-			<i class="fa fa-arrow-left" aria-hidden="true"></i>
-			Voltar
-		</p>
+		<div>
+			<!-- <h2>Sinopse</h2>
+			<p>{{evento.descricao}}</p> -->
+			<ul>
+				<li *ngFor="let local of locais; let i = index">
+					<h2>{{local.cinema}}</h2>
+					<p>{{local.endereco}}</p>
+					<ul>
+						<li *ngFor="let hora of local.horarios; let index = index"><p>Sala {{index + 1}}</p><button (click)="goToPurchase(evento, local, hora)">{{hora}}</button></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</article>
 </section>

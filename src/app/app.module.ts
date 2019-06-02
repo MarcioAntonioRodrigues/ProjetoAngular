@@ -19,6 +19,8 @@ import { AuthService } from './services/auth.service';
 import { EventsService } from './services/events.service';
 import { DetailComponent } from './detail/detail.component';
 import { SessionService } from './services/session.service';
+import { PurchaseComponent } from './purchase/purchase.component';
+import { PurchaseService } from './services/purchase.service';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { SessionService } from './services/session.service';
 	HeaderComponent,
 	DetailComponent,
 	FooterComponent,
+	PurchaseComponent,
 	CategoryComponent,
 	CarousselComponent,
   ],
@@ -42,7 +45,8 @@ import { SessionService } from './services/session.service';
   providers: [
 		AuthService,
 		EventsService,
-		SessionService
+		SessionService,
+		PurchaseService
 	],
   bootstrap: [AppComponent]
 })
