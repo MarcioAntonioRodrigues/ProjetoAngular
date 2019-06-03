@@ -1,0 +1,139 @@
+main
+{
+    background: #fff;
+}
+
+main div
+{
+    width: 100%;
+    max-width: 980px;
+    display: flex;
+    margin: 0 auto;
+}
+
+main div section.left-side
+{
+    width: 350px;
+    padding-top: 100px;
+    background: #f8f8f8;
+}
+
+main div section.left-side img
+{
+    width: 100px;
+    height: 150px;
+    margin-top: -90px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px -3px rgba(0,0,0,.5);
+}
+
+main div section.left-side article
+{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+main div section.left-side article p,
+main div section.left-side article h3
+{
+    margin-bottom: 10px;
+}
+
+main div section.left-side article p,
+main div section.left-side article span
+{
+    font-size: .8rem;
+}
+
+main div section.left-side article span
+{
+    color: #fff;
+    padding: 3px;
+    margin-right: 5px;
+    background: orange;
+}
+main div section.left-side article.tipo-ingresso,
+main div section.left-side article.forma-pagamento
+{
+    width: 100%;
+    cursor: pointer;
+}
+
+main div section.left-side article.tipo-ingresso
+{
+    background: #2e97fc;
+    margin: 20px 0 2px;
+}
+
+main div section.left-side article.forma-pagamento
+{
+    background: #c8c3c3;
+    margin: 0;
+}
+
+main div section.left-side article.tipo-ingresso h3,
+main div section.left-side article.forma-pagamento h3
+{
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+}
+
+main div section.left-side article.tipo-ingresso i,
+main div section.left-side article.forma-pagamento i
+{
+    color: #fff;
+    margin-left: 20px;
+}
+
+/* resumo pedido */
+
+main div section.left-side article.resumo-pedido
+{
+    width: 100%;
+    margin-left: 0;
+}
+
+main div section.left-side article.resumo-pedido div
+{
+    width: 95%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+}
+main div section.left-side article.resumo-pedido div h3
+{
+    margin: 0;
+}
+
+main div section.left-side article.resumo-pedido div.pay
+{
+    justify-content: space-between;
+}
+
+main div section.left-side article.resumo-pedido div span
+{
+    background: none;
+}
+
+main div section.left-side article.resumo-pedido div span i
+{
+    color: #50525f;
+}
+
+main div section.left-side article button
+{
+    border: none;
+    color: #fff;
+    padding: 10px;
+    font-size: .8rem;
+    margin-bottom: 20px;
+    background: #2e97fc;
+}
+
+/* right-side */
+
+main div section.right-side
+{
+    background: red;
+}

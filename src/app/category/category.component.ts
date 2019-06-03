@@ -37,7 +37,7 @@ export class CategoryComponent implements OnInit
 		if(this.categoria == 'cinema')
 		{
 			this.listaCategoria = this.filmes;
-			this.titulo = "Cinema";
+			this.titulo = "Filmes em cartaz";
 		}
 		if(this.categoria == 'teatro')
 		{

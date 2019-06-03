@@ -11,19 +11,19 @@
 				Classificação <span>{{evento.classificacao}}</span><span>{{evento.duracao}} min.</span>
 			</p>
 			<ul>
-				<li *ngFor="let day of evento.data; let i = index" (click)="chosenDay = i">
+				<li *ngFor="let day of evento.data; let i = index" (click)="getEventDate(day, i)">
 					<p [ngClass]="{'selectedDay': chosenDay == i}">{{weekDay[i]}}</p>
 					<p [ngClass]="{'selectedDay': chosenDay == i}">{{day}}</p>
 				</li>
 			</ul>
+						<h2>Sinopse:</h2>
+			<p>{{evento.descricao}}</p>
 		</div>
 	</article>
 </section>
 <section class="descricao">
 	<article>
 		<div>
-			<!-- <h2>Sinopse</h2>
-			<p>{{evento.descricao}}</p> -->
 			<ul>
 				<li *ngFor="let local of locais; let i = index">
 					<h2>{{local.cinema}}</h2>

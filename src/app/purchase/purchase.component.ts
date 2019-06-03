@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsService } from '../services/events.service';
 import { ActivatedRoute } from '@angular/router';
-import { PurchaseService } from '../services/purchase.service';
+import { SessionService } from '../services/session.service';
 
 @Component({
 	selector: 'app-purchase',
@@ -18,7 +18,7 @@ export class PurchaseComponent implements OnInit
     
     constructor(eventsService:EventsService, 
                 private route: ActivatedRoute,
-                private purchaseService: PurchaseService)
+                private sessionService: SessionService)
     {
         this.filmes = eventsService.filmes;
 		this.pecas = eventsService.pecas;
@@ -26,7 +26,6 @@ export class PurchaseComponent implements OnInit
 
     ngOnInit()
     {
-        this.purchase = this.purchaseService.getPurchase();
-        console.log('chegou',this.purchase);
+        this.purchase = this.sessionService.getPurchase();
     }
 }

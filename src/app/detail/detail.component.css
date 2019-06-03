@@ -17,7 +17,6 @@ section.principal img
 {
 	width: 220px;
 	height: 320px;
-	position: absolute;
 	margin-right: 30px;
 	box-shadow: 5px 5px 5px -3px rgba(0,0,0,.5);
 }
@@ -55,12 +54,13 @@ section.principal article.info
 section.principal div
 {
 	width: 100%;
-	margin-left: 250px;
 }
+
 section.principal div  ul
 {
-	margin-top: 20px;
+	margin: 20px 0;
 	border-top: 1px solid rgba(0,0,0,.2);
+	border-bottom: 1px solid rgba(0,0,0,.2);
 }
 
 section.principal div  ul li
@@ -104,7 +104,6 @@ section.descricao article
 
 section.descricao article div
 {
-	margin-left: 250px;
 	margin-bottom: 30px;
 }
 
@@ -145,14 +144,15 @@ section.descricao article div ul li ul li p
 section.descricao article div ul li ul li button
 {
 	transition: .5s;
+	color: #2e97fc;
 	padding: 10px 15px;
 	background: transparent;
-	border: 1px solid rgba(0,0,0,.2);
+	border: 1px solid #2e97fc;
 }
 
 section.descricao article div ul li ul li button:hover
 {
 	color: #f8f8f8;
-	background: rgba(0,0,0,1);
+	background: #2e97fc;
 }
 

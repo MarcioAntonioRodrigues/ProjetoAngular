@@ -1,1 +1,52 @@
-<h1>{{purchase.evento.titulo}}</h1>
+<main>
+    <div>
+        <section class="left-side">
+            <img src="{{purchase.evento.img}}" alt="">
+            <article>
+                <h3>{{purchase.evento.titulo}}</h3>
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{purchase.local.cinema}} - Sala 4</p>
+                <p><i class="fa fa-calendar" aria-hidden="true"></i> {{purchase.dia}} - {{purchase.hora}}</p>
+                <span>Legendado</span>
+                <span>Normal</span>
+            </article>
+            <article class="tipo-ingresso">
+                <i class="fa fa-ticket" aria-hidden="true"></i>
+                <h3>TIPOS DE INGRESSOS</h3>
+            </article>
+            <article class="forma-pagamento">
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                <h3>FORMA DE PAGAMENTO</h3>
+            </article>
+            <article class="resumo-pedido">
+                <div>
+                    <h3>RESUMO DO PEDIDO</h3>
+                </div>
+                <div>
+                    <i class="fa fa-ticket" aria-hidden="true"></i>
+                    <P>INGRESSOS</P>
+                </div>
+                <div class="pay">
+                    <p>1x Inteira</p>
+                    <p>R$ 27,00</p>
+                </div>
+                <div class="pay">
+                    <span>
+                        <p>
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                            TOTAL:
+                        </p>
+                    </span>
+                    <P>R$: 27,00</P>
+                </div>
+            </article>
+            <article>
+                <button>
+                    PAGAMENTO
+                </button>
+            </article>
+        </section>
+        <section class="right-side">
+        
+        </section>
+    </div>
+</main>

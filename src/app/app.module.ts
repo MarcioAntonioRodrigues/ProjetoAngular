@@ -20,7 +20,6 @@ import { EventsService } from './services/events.service';
 import { DetailComponent } from './detail/detail.component';
 import { SessionService } from './services/session.service';
 import { PurchaseComponent } from './purchase/purchase.component';
-import { PurchaseService } from './services/purchase.service';
 
 @NgModule({
   declarations: [
@@ -45,8 +44,7 @@ import { PurchaseService } from './services/purchase.service';
   providers: [
 		AuthService,
 		EventsService,
-		SessionService,
-		PurchaseService
+		SessionService
 	],
   bootstrap: [AppComponent]
 })

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EventsService } from '../services/events.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from "@angular/common";
-import { PurchaseService } from '../services/purchase.service';
+import { SessionService } from '../services/session.service';
 
 @Component({
 	selector: 'app-detail',
@@ -18,13 +18,21 @@ export class DetailComponent implements OnInit
 	pecas: any = [];
 	filmes: any = [];
 	chosenDay = 0;
+	eventdate = new Date().toLocaleDateString();
 	eventsService: EventsService;
+	purchase: any = 
+	{
+		evento: {},
+		local: {},
+        hora: '',
+        dia: ''
+	}
 
 	constructor(eventsService:EventsService, 
 				private route: ActivatedRoute,
 				private router: Router,
 				private location: Location,
-				private purchaseService: PurchaseService)
+				private sessionService: SessionService)
 	{
 		this.filmes = eventsService.filmes;
 		this.pecas = eventsService.pecas;
@@ -68,7 +76,22 @@ export class DetailComponent implements OnInit
 
 	goToPurchase(evento, local, hora)
 	{
-		this.purchaseService.setPurchase(evento, local, hora);
+		this.setPurchase(evento, local, hora, this.eventdate);
 		this.router.navigate(['/compra']);
 	}
+
+	getEventDate(day, val)
+	{
+		this.chosenDay = val;
+		this.eventdate = day;
+	}
+
+	setPurchase(evento, local, hora, dia)
+    {
+        this.purchase.dia = dia;
+        this.purchase.hora = hora;
+		this.purchase.local = local;
+        this.purchase.evento = evento;
+        this.sessionService.setPurchase(this.purchase);
+    }
 }
