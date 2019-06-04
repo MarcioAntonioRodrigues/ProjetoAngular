@@ -14,10 +14,13 @@
 		 <li *ngIf="username !== null" class="user-name">
 			<i class="fa fa-user"></i>
 			{{username}}
+			<p *ngIf="username" (click)="logout()" class="logout">
+				Sair
+			</p>
 		 </li>
-		 <li *ngIf="username" (click)="logout()">
+		 <!-- <li *ngIf="username" (click)="logout()" class="logout">
 			 Sair
-		 </li>
+		 </li> -->
 		<li [routerLink]="['/']">
 			Criar conta
 		 </li>

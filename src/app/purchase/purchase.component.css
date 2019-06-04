@@ -16,6 +16,7 @@ main div section.left-side
     width: 350px;
     padding-top: 100px;
     background: #f8f8f8;
+    box-shadow: 1px -5px 10px 0px gray;
 }
 
 main div section.left-side img
@@ -24,6 +25,7 @@ main div section.left-side img
     height: 150px;
     margin-top: -90px;
     margin-left: 20px;
+    margin-bottom: 10px;
     box-shadow: 5px 5px 5px -3px rgba(0,0,0,.5);
 }
 
@@ -53,35 +55,49 @@ main div section.left-side article span
     margin-right: 5px;
     background: orange;
 }
-main div section.left-side article.tipo-ingresso,
-main div section.left-side article.forma-pagamento
+/* main div section.left-side article.tipo-ingresso, */
+main div section.left-side article.bt-change
 {
     width: 100%;
     cursor: pointer;
 }
 
-main div section.left-side article.tipo-ingresso
+main div section.left-side article.bt-change.selected
 {
     background: #2e97fc;
-    margin: 20px 0 2px;
+    margin: 2px 0;
+    position: relative;
 }
 
-main div section.left-side article.forma-pagamento
+main div section.left-side article.bt-change.selected:before
+{
+    content: "";
+    width: 0;
+    height: 0;
+    float: right;
+    margin-top: -15px;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid #2e97fc;
+    position: absolute;
+    right: -10px;
+    margin-top: 17px;
+}
+
+main div section.left-side article.bt-change
 {
     background: #c8c3c3;
     margin: 0;
 }
 
-main div section.left-side article.tipo-ingresso h3,
-main div section.left-side article.forma-pagamento h3
+main div section.left-side article.bt-change h3
 {
     color: #fff;
     padding: 10px;
     display: inline-block;
 }
 
-main div section.left-side article.tipo-ingresso i,
-main div section.left-side article.forma-pagamento i
+main div section.left-side article.bt-change i
 {
     color: #fff;
     margin-left: 20px;
@@ -135,5 +151,51 @@ main div section.left-side article button
 
 main div section.right-side
 {
-    background: red;
+    width: 630px;
+    padding-top: 100px;
+    padding-left: 20px;
+}
+
+main div section.right-side div
+{
+    padding: 20px 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+main div section.right-side article.payment
+{
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 10px;
+}
+main div section.right-side article.payment div h3
+{
+    padding: 10px 10px;
+}
+
+main div section.right-side article.payment div
+{
+    padding: 0;
+}
+
+main div section.right-side article.payment div:nth-child(1)
+{
+    background: rgba(0,0,0,.2);
+    border-radius: 8px 8px 0 0;
+}
+
+main div section.right-side article.payment ul li
+{
+    padding: 20px 10px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+main div section.right-side article.payment ul li:last-child
+{
+    border-bottom: none;
+}
+
+main div section.right-side article.payment ul li input
+{
+    margin-right: 10px;
 }

@@ -15,6 +15,7 @@ export class PurchaseComponent implements OnInit
     filmes: any = [];
     eventsService: EventsService;
     purchase: any;
+    view = 0;
     
     constructor(eventsService:EventsService, 
                 private route: ActivatedRoute,
@@ -27,5 +28,10 @@ export class PurchaseComponent implements OnInit
     ngOnInit()
     {
         this.purchase = this.sessionService.getPurchase();
+    }
+
+    changeView(val)
+    {
+        this.view = val;
     }
 }

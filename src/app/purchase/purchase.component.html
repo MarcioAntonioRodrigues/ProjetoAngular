@@ -9,11 +9,11 @@
                 <span>Legendado</span>
                 <span>Normal</span>
             </article>
-            <article class="tipo-ingresso">
+            <article [ngClass]="{'selected': view === 0}" class="bt-change" (click)="changeView(0)">
                 <i class="fa fa-ticket" aria-hidden="true"></i>
                 <h3>TIPOS DE INGRESSOS</h3>
             </article>
-            <article class="forma-pagamento">
+            <article [ngClass]="{'selected': view === 1}" class="bt-change" (click)="changeView(1)">
                 <i class="fa fa-credit-card" aria-hidden="true"></i>
                 <h3>FORMA DE PAGAMENTO</h3>
             </article>
@@ -46,7 +46,82 @@
             </article>
         </section>
         <section class="right-side">
-        
+            <article *ngIf="view === 0">
+                <div>
+                    <h3>Escolha os tipos de ingresso</h3>
+                </div>
+                <div>
+                    <span>
+                        <p>Inteira</p>
+                        <p>R$ 28,00</p>
+                    </span>
+                    <select name="" id="">
+                        <option value="" selected disabled>Qtd</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div>
+                    <span>
+                        <p>Meia</p>
+                        <p>R$ 14,00</p>
+                    </span>
+                    <select name="" id="">
+                        <option value="" selected disabled>Qtd</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div>
+                    <span>
+                        <p>KM de vantagens Ipiranga</p>
+                        <p>R$ 12,00</p>
+                    </span>
+                    <select name="" id="">
+                        <option value="" selected disabled>Qtd</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </article>
+            <article class="payment" *ngIf="view === 1">
+                <div>
+                    <h3>
+                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        FORMAS DE PAGAMENTO
+                    </h3>
+                </div>
+                <ul>
+                    <li>
+                        <input name="credit-card" type="radio">
+                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        Cartão de crédito
+                    </li>
+                    <li>
+                        <input name="credit-card" type="radio">
+                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        Cartão de crédito
+                    </li>
+                    <li>
+                        <input name="credit-card" type="radio">
+                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        Cartão de crédito
+                    </li>
+                    <li>
+                        <input name="credit-card" type="radio">
+                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        Cartão de crédito
+                    </li>
+                    <li>
+                        <input name="credit-card" type="radio">
+                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        Cartão de crédito
+                    </li>
+                </ul>
+            </article>
         </section>
     </div>
 </main>
