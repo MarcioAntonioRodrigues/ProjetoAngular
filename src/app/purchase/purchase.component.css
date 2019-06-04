@@ -113,18 +113,30 @@ main div section.left-side article.resumo-pedido
 
 main div section.left-side article.resumo-pedido div
 {
-    width: 95%;
+	width: 95%;
     padding: 10px 0;
     border-bottom: 1px solid rgba(0,0,0,.2);
 }
+
+main div section.left-side article.resumo-pedido div div
+{
+	border: none;
+}
+
 main div section.left-side article.resumo-pedido div h3
 {
     margin: 0;
 }
 
-main div section.left-side article.resumo-pedido div.pay
+main div section.left-side article.resumo-pedido div.pay,
+main div section.left-side article.resumo-pedido div.pay.payment div
 {
-    justify-content: space-between;
+	justify-content: space-between;
+}
+
+main div section.left-side article.resumo-pedido div.pay.payment
+{
+	display: block;
 }
 
 main div section.left-side article.resumo-pedido div span

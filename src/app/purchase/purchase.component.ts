@@ -11,11 +11,18 @@ import { SessionService } from '../services/session.service';
 
 export class PurchaseComponent implements OnInit
 {
+    view = 0;
+    purchase: any;
     pecas: any = [];
     filmes: any = [];
-    eventsService: EventsService;
-    purchase: any;
-    view = 0;
+	eventsService: EventsService;
+	inteira = 0;
+	kmVtg = 0;
+	meia = 0;
+	selectInteira = 0;
+	selectMeia = 0;
+	selectVantagem = 0;
+	total = 0;
     
     constructor(eventsService:EventsService, 
                 private route: ActivatedRoute,
@@ -33,5 +40,21 @@ export class PurchaseComponent implements OnInit
     changeView(val)
     {
         this.view = val;
-    }
+	}
+	
+	calcTicket()
+	{
+		let vtg = 12;
+		let halph = 14;
+		this.total = 0;
+		let entire = 28;
+		halph *= this.selectMeia;
+		vtg *= this.selectVantagem;
+		entire *= this.selectInteira;
+		this.inteira = entire;
+		this.meia = halph;
+		this.kmVtg = vtg;
+		this.total = this.inteira + this.meia + this.kmVtg;
+		console.log(this.total);
+	}
 }

@@ -25,9 +25,20 @@
                     <i class="fa fa-ticket" aria-hidden="true"></i>
                     <P>INGRESSOS</P>
                 </div>
-                <div class="pay">
-                    <p>1x Inteira</p>
-                    <p>R$ 27,00</p>
+                <div class="pay payment">
+					<p [hidden]="selectInteira > 0 || selectMeia > 0 || selectVantagem > 0">Você não possui ingressos selecionados</p>
+					<div *ngIf="selectInteira > 0">
+						<p>{{selectInteira}}x Inteira</p>
+						<p>R$ {{selectInteira * 28}},00</p>
+					</div>
+					<div *ngIf="selectMeia > 0">
+						<p>{{selectMeia}}x Meia</p>
+						<p>R$ {{selectMeia * 14}},00</p>
+					</div>
+					<div *ngIf="selectVantagem > 0">
+						<p>{{selectVantagem}}x KM de vantagens Ipiranga</p>
+						<p>R$ {{selectVantagem * 12}},00</p>
+					</div>
                 </div>
                 <div class="pay">
                     <span>
@@ -36,11 +47,11 @@
                             TOTAL:
                         </p>
                     </span>
-                    <P>R$: 27,00</P>
+                    <P>R$ {{(selectInteira * 28)+(selectMeia * 14)+(selectVantagem * 12)}},00</P>
                 </div>
             </article>
             <article>
-                <button>
+                <button (click)="calcTicket()">
                     PAGAMENTO
                 </button>
             </article>
@@ -55,8 +66,9 @@
                         <p>Inteira</p>
                         <p>R$ 28,00</p>
                     </span>
-                    <select name="" id="">
+                    <select name="" id="" [(ngModel)]="selectInteira">
                         <option value="" selected disabled>Qtd</option>
+                        <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -67,8 +79,9 @@
                         <p>Meia</p>
                         <p>R$ 14,00</p>
                     </span>
-                    <select name="" id="">
+                    <select name="" id="" [(ngModel)]="selectMeia">
                         <option value="" selected disabled>Qtd</option>
+                        <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -79,8 +92,9 @@
                         <p>KM de vantagens Ipiranga</p>
                         <p>R$ 12,00</p>
                     </span>
-                    <select name="" id="">
+                    <select name="" id="" [(ngModel)]="selectVantagem">
                         <option value="" selected disabled>Qtd</option>
+                        <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
