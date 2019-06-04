@@ -8,9 +8,9 @@ section.principal
     left: calc(50% - 490px);
 }
 
-section.principal h1
+section.principal img
 {
-	color: #2e97fc;
+	width: 250px;
 }
 
 section.principal label, 
