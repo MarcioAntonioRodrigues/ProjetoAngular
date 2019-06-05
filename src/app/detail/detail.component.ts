@@ -34,7 +34,7 @@ export class DetailComponent implements OnInit
 				private location: Location,
 				private sessionService: SessionService)
 	{
-		this.filmes = eventsService.filmes;
+		this.filmes = eventsService.jsonList;
 		this.pecas = eventsService.pecas;
 		this.weekDay = [
 			'DOM',

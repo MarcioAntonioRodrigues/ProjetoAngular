@@ -1,14 +1,14 @@
 <section class="principal">
 	<article class="info">
-		<img src="{{evento.img}}" alt="">
+		<img src="{{evento.Poster}}" alt="">
 		<div>
 			<p (click)="navigateBack()">
 				<i class="fa fa-arrow-left" aria-hidden="true"></i>
 				Voltar
 			</p>
-			<h1>{{evento.titulo}}</h1>
+			<h1>{{evento.Title}}</h1>
 			<p>
-				Classificação <span>{{evento.classificacao}}</span><span>{{evento.duracao}} min.</span>
+				Classificação <span>1{{evento.imdbRating[0]}}</span><span>{{evento.Runtime}}.</span>
 			</p>
 			<ul>
 				<li *ngFor="let day of evento.data; let i = index" (click)="getEventDate(day, i)">
@@ -16,8 +16,8 @@
 					<p [ngClass]="{'selectedDay': chosenDay == i}">{{day}}</p>
 				</li>
 			</ul>
-						<h2>Sinopse:</h2>
-			<p>{{evento.descricao}}</p>
+				<h2>Sinopse:</h2>
+			<p>{{evento.Plot}}</p>
 		</div>
 	</article>
 </section>

@@ -16,16 +16,22 @@ export class HomeComponent
 	tituloPecas = "Teatro";
 	tituloFilmes = "Cinema";
 	showMenuFooter: boolean;
+	moviesList = ["batman", "the avengers", 'super man', 'aladdin', 'captain marvel', 'What Men Want', 'Serenity', 'Happy Death Day 2U'];
+	jsonList = [];
 
-	constructor(eventsService:EventsService, private router: Router)
+	constructor(private eventsService:EventsService, private router: Router)
 	{
-		this.filmes = eventsService.filmes;
-		this.pecas = eventsService.pecas;
+		this.filmes = eventsService.jsonList;
+		this.pecas = eventsService.jsonList;
 		this.bestEvents = eventsService.bestEvents;
+		this.eventsService.getMoviesList();
+		console.log('lista json', this.eventsService.jsonList)
+
 	}
 
 	goToEvent(categoria)
 	{
 		this.router.navigate(['/categorias', categoria]);
 	}
+	
 }

@@ -5,9 +5,9 @@
 	<div class="inner">
 		<article *ngFor="let caroussel of carousselItems">
 			<span (click)="goToEvent(caroussel)">
-				<img src="{{caroussel.img}}" alt="">
-				<p>{{caroussel.titulo}}<span> {{caroussel.categoria}}</span></p>
-				<p>Classificação: {{caroussel.classificacao}}</p>
+				<img src="{{caroussel.Poster}}" alt="">
+				<p>{{caroussel.Title}}<span>1{{caroussel.imdbRating[0]}} anos</span></p>
+				<p>{{caroussel.Genre}}</p>
 			</span>
 		</article>
 	</div>
