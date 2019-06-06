@@ -19,7 +19,6 @@ export class DetailComponent implements OnInit
 	filmes: any = [];
 	chosenDay = 0;
 	eventdate = new Date().toLocaleDateString();
-	eventsService: EventsService;
 	purchase: any = 
 	{
 		evento: {},
@@ -28,7 +27,7 @@ export class DetailComponent implements OnInit
         dia: ''
 	}
 
-	constructor(eventsService:EventsService, 
+	constructor(private eventsService:EventsService, 
 				private route: ActivatedRoute,
 				private router: Router,
 				private location: Location,
@@ -62,17 +61,25 @@ export class DetailComponent implements OnInit
 
 	getLocales()
 	{
-		this.evento = this.route.queryParamMap;
-		this.evento = this.evento.source._value;
-		this.filmes.forEach(element => {
-			if(element.id == this.evento.id)
+		this.eventsService.locales.forEach(local=>
 			{
-				element.local.forEach(local=>{
-					this.locais.push(local)
-				})
-			}
-		});
+				this.locais.push(local);
+			})
 	}
+
+	// getLocales()
+	// {
+	// 	this.evento = this.route.queryParamMap;
+	// 	this.evento = this.evento.source._value;
+	// 	this.filmes.forEach(element => {
+	// 		if(element.id == this.evento.id)
+	// 		{
+	// 			element.local.forEach(local=>{
+	// 				this.locais.push(local)
+	// 			})
+	// 		}
+	// 	});
+	// }
 
 	goToPurchase(evento, local, hora)
 	{

@@ -10,9 +10,18 @@ export class EventsService
 	bestEvents:any = [];
 	baseUrl = "http://www.omdbapi.com/?t=";
 	apiKey = "&apikey=99b98f24";
+	baseUrl2 = "https://api.themoviedb.org/3/movie/";
+	apiKey2 = "?api_key=e8c3e24acb276807efbdee9422c2e5e3&language=pt-BR";
 	
 	moviesList = ["batman", "the avengers", 'dumbo', 'aladdin', 'captain marvel', 'What Men Want', 'Serenity', 'Happy Death Day 2U'];
-	jsonList = [];
+	moviesList2 = ["420817", "5241", '238', '278', '424', '299534', '497', '324857'];
+    jsonList = [];
+    locales = [
+        { cinema: 'São Luís Lgo do Machado', endereco: 'Lgo. do Machado, 161.', horarios: ['12:00', '15:00' , '17:00', '19:00', '22:00']}, 
+        { cinema: 'Knoplex Tijuca', endereco: 'Shopping Tijuca, 188.', horarios: ['12:00', '15:00' , '17:00']}, 
+        { cinema: 'Cinemark Rio Sul', endereco: 'Shopping Rio Sul, 123.', horarios: [ '12:00', '15:00' , '17:00']}
+    ];
+    data = ['11/05', '12/05', '13/05', '14/05', '15/05'];
 
     constructor(private http: Http)
     {
@@ -58,7 +67,7 @@ export class EventsService
 
 	getMoviesList():any
 	{
-		this.moviesList.forEach(element => {
+		this.moviesList2.forEach(element => {
 			this.getMovies(element)
 				.subscribe(res =>
 				{
@@ -70,7 +79,7 @@ export class EventsService
 	getMovies(nomeEvento):any
     {
         return this.http
-        .get(this.baseUrl + nomeEvento + this.apiKey)
+        .get(this.baseUrl2 + nomeEvento + this.apiKey2)
         .map((res:any) => {
             return res.json();
         });

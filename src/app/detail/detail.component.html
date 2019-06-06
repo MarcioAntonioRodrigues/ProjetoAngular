@@ -1,23 +1,23 @@
 <section class="principal">
 	<article class="info">
-		<img src="{{evento.Poster}}" alt="">
+		<img src="http://image.tmdb.org/t/p/w185/{{evento.poster_path}}" alt="">
 		<div>
 			<p (click)="navigateBack()">
 				<i class="fa fa-arrow-left" aria-hidden="true"></i>
 				Voltar
 			</p>
-			<h1>{{evento.Title}}</h1>
+			<h1>{{evento.title}}</h1>
 			<p>
-				Classificação <span>1{{evento.imdbRating[0]}}</span><span>{{evento.Runtime}}.</span>
+				Classificação <span>1{{evento.genres[0].id}}</span><span>{{evento.runtime}}min.</span>
 			</p>
 			<ul>
-				<li *ngFor="let day of evento.data; let i = index" (click)="getEventDate(day, i)">
+				<li *ngFor="let day of eventsService.data; let i = index" (click)="getEventDate(day, i)">
 					<p [ngClass]="{'selectedDay': chosenDay == i}">{{weekDay[i]}}</p>
 					<p [ngClass]="{'selectedDay': chosenDay == i}">{{day}}</p>
 				</li>
 			</ul>
 				<h2>Sinopse:</h2>
-			<p>{{evento.Plot}}</p>
+			<p>{{evento.overview}}</p>
 		</div>
 	</article>
 </section>

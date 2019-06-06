@@ -28,7 +28,7 @@ export class PurchaseComponent implements OnInit
                 private route: ActivatedRoute,
                 private sessionService: SessionService)
     {
-        this.filmes = eventsService.filmes;
+        this.filmes = eventsService.jsonList;
 		this.pecas = eventsService.pecas;
     }
 
