@@ -211,3 +211,48 @@ main div section.right-side article.payment ul li input
 {
     margin-right: 10px;
 }
+
+/* card-info */
+
+article.card-info
+{
+    width: 300px;
+    margin-top: 20px;
+}
+
+main div section.right-side article.card-info div:nth-child(1)
+{
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+main div section.right-side article.card-info div:nth-child(1) input
+{
+    width: 90%;
+    border: none;
+    padding: 0 5px;
+    margin-left: 10px;
+    border-left: 1px solid rgba(0,0,0,.2);
+}
+
+main div section.right-side article.card-info input:nth-child(2)
+{
+    padding: 10px;
+    width: 300px;
+}
+
+main div section.right-side article.card-info div
+{
+    padding: 20px 0;    
+}
+
+main div section.right-side article.card-info div select,
+main div section.right-side article.card-info div input
+{
+    width: 90px;
+    border-radius: none;
+    padding: 10px;
+    margin: 5px;
+}
