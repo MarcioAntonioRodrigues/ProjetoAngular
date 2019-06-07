@@ -50,11 +50,6 @@
                     <P>R$ {{(selectInteira * 28)+(selectMeia * 14)+(selectVantagem * 12)}},00</P>
                 </div>
             </article>
-            <article>
-                <button (click)="calcTicket()">
-                    PAGAMENTO
-                </button>
-            </article>
         </section>
         <section class="right-side">
             <article *ngIf="view === 0">
@@ -110,54 +105,63 @@
                 </div>
                 <ul>
                     <li>
-                        <input name="credit-card" type="radio">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        Cartão de crédito
+                        <input name="credit-card" value="Master Card" [(ngModel)]="selectedCard" type="radio">
+                        <i class="fa fa-cc-mastercard"></i>
+                        Master Card
                     </li>
                     <li>
-                        <input name="credit-card" type="radio">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        Cartão de crédito
+                        <input name="credit-card" value="Visa" [(ngModel)]="selectedCard" type="radio">
+                        <i class="fa fa-cc-visa"></i>
+                        Visa
                     </li>
                     <li>
-                        <input name="credit-card" type="radio">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        Cartão de crédito
+                        <input name="credit-card" value="Discover" [(ngModel)]="selectedCard" type="radio">
+                        <i class="fa fa-cc-discover"></i>
+                        Discover
                     </li>
                     <li>
-                        <input name="credit-card" type="radio">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        Cartão de crédito
+                        <input name="credit-card" value="American Express" [(ngModel)]="selectedCard" type="radio">
+                        <i class="fa fa-cc-amex"></i>
+                        American Express
                     </li>
                     <li>
-                        <input name="credit-card" type="radio">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        Cartão de crédito
+                        <input name="credit-card" value="PayPal" [(ngModel)]="selectedCard" type="radio">
+                        <i class="fa fa-cc-paypal"></i>
+                        PayPal
                     </li>
                 </ul>
-            </article>
-            <h3>
-                Informe os dados do cartão
-            </h3>
-            <article class="card-info">
-                <div>
-                    <i class="fa fa-credit-card" aria-hidden="true"></i>
-                    <input placeholder="Número do cartão" type="number">
-                </div>
-                <input placeholder="Nome como está no cartão" type="text">
-                <div>
-                    <select name="" id="">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                    <select name="" id="">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                    <input placeholder="CVV" type="number" maxlength="3">
-                </div>
+				<h3 class="card-data" *ngIf="selectedCard != null">
+					Informe os dados do cartão - {{selectedCard}}
+				</h3>
+				<article class="card-info" *ngIf="selectedCard != null">
+					<form (ngSubmit)="calcTicket()" #payForm="ngForm">
+						<div>
+							<i class="fa fa-credit-card" aria-hidden="true"></i>
+							<input required placeholder="Número do cartão" [(ngModel)]="creditCard.number" name="cardNumber" type="number">
+						</div>
+						<input required placeholder="Nome como está no cartão" [(ngModel)]="creditCard.name" name="cardName" type="text">
+						<div>
+							<select required name="cardMonth" [(ngModel)]="creditCard.month" id="">
+								<option value="" disabled selected>Mês</option>
+								<option value="JAN">Jan</option>
+								<option value="FEV">Fev</option>
+								<option value="MAR">Mar</option>
+							</select>
+							<select required name="cardYear" [(ngModel)]="creditCard.year" id="">
+								<option value="" disabled selected>Ano</option>
+								<option *ngFor="let yer of cardYear">
+									{{year}}
+								</option>
+							</select>
+							<input required placeholder="CVV" name="cardCVV" [(ngModel)]="creditCard.cvv" type="text" maxlength="3">
+						</div>
+						<article>
+							<button mat-flat-button type="submit" [disabled]="!payForm.form.valid">
+								PAGAMENTO
+							</button>
+						</article>
+					</form>
+				</article>
             </article>
         </section>
     </div>

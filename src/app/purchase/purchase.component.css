@@ -149,16 +149,6 @@ main div section.left-side article.resumo-pedido div span i
     color: #50525f;
 }
 
-main div section.left-side article button
-{
-    border: none;
-    color: #fff;
-    padding: 10px;
-    font-size: .8rem;
-    margin-bottom: 20px;
-    background: #2e97fc;
-}
-
 /* right-side */
 
 main div section.right-side
@@ -177,8 +167,9 @@ main div section.right-side div
 
 main div section.right-side article.payment
 {
+	border-radius: 10px;
+	margin-bottom: 20px;
     border: 1px solid rgba(0,0,0,.2);
-    border-radius: 10px;
 }
 main div section.right-side article.payment div h3
 {
@@ -212,20 +203,33 @@ main div section.right-side article.payment ul li input
     margin-right: 10px;
 }
 
+h3.card-data
+{
+	font-weight: 500;
+	margin: 10px 20px 0;
+}
+
 /* card-info */
 
 article.card-info
 {
     width: 300px;
-    margin-top: 20px;
+    margin: 20px;
+}
+
+main div section.right-side article.card-info div
+{
+	border-bottom: none;
 }
 
 main div section.right-side article.card-info div:nth-child(1)
 {
     padding: 10px;
+	border-radius: 0;
+    background: none;
     align-items: center;
     margin-bottom: 15px;
-    border: 1px solid rgba(0,0,0,.2);
+	border: 1px solid rgba(0,0,0,.2);
 }
 
 main div section.right-side article.card-info div:nth-child(1) input
@@ -240,19 +244,40 @@ main div section.right-side article.card-info div:nth-child(1) input
 main div section.right-side article.card-info input:nth-child(2)
 {
     padding: 10px;
-    width: 300px;
+	width: 300px;
+    border: 1px solid rgba(0,0,0,.2);
 }
 
-main div section.right-side article.card-info div
+main div section.right-side article.card-info div:nth-child(3)
 {
-    padding: 20px 0;    
+	padding: 15px 0;    
+	width: 320px;
 }
 
 main div section.right-side article.card-info div select,
 main div section.right-side article.card-info div input
 {
-    width: 90px;
-    border-radius: none;
+	width: 90px;
     padding: 10px;
-    margin: 5px;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+main div section.right-side article.card-info div select:nth-child(2)
+{
+	margin: 0 10px;
+}
+
+main div section.right-side article button:disabled
+{
+	background: #8abff2;
+}
+main div section.right-side article button
+{
+    border: none;
+    padding: 0px;
+	width: 200px;
+    color: #fff;
+    font-size: .8rem;
+    margin-bottom: 20px;
+	background: #2e97fc;
 }
