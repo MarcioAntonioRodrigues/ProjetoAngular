@@ -10,23 +10,20 @@ import { Router } from '@angular/router';
 
 export class HomeComponent 
 {
-	filmes:any = [];
-	pecas: any = [];
+	bestMovies:any = [];
+	actionMovies: any = [];
 	bestEvents:any = [];
-	tituloPecas = "Teatro";
-	tituloFilmes = "Cinema";
+	tituloAcao = "Em breve";
+	tituloDestaques = "Mais buscados";
 	showMenuFooter: boolean;
-	moviesList = ["batman", "the avengers", 'super man', 'aladdin', 'captain marvel', 'What Men Want', 'Serenity', 'Happy Death Day 2U'];
-	jsonList = [];
 
 	constructor(private eventsService:EventsService, private router: Router)
 	{
-		this.filmes = eventsService.jsonList;
-		this.pecas = eventsService.jsonList;
+		this.eventsService.getMoviesListByCategory("destaques");
+		this.eventsService.getMoviesListByCategory("acao");
+		this.bestMovies = eventsService.bestJsonList;
+		this.actionMovies = eventsService.actionJsonList;
 		this.bestEvents = eventsService.bestEvents;
-		this.eventsService.getMoviesList();
-		console.log('lista json', this.eventsService.jsonList)
-
 	}
 
 	goToEvent(categoria)

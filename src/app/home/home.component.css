@@ -18,23 +18,13 @@ section.principal h1
     margin-bottom: 20px;
 }
 
-/* article search-area & article eventos */
+/* article eventos */
 
-article.search-area,
 article.eventos
 {
     width: 100%;
     max-width: 980px;
-    margin: 20px auto;
-}
-
-article.search-area
-{
-    padding-top: 100px;
-}
-
-article.eventos
-{
+    margin: 0px auto;
     text-align: left;
 }
 
@@ -93,42 +83,6 @@ article.eventos.destaques
 {
     width: 100%;
     max-width: 500px;    
-}
-
-/* div search-content */
-
-div.search-content
-{
-	width: 100%;
-    height: 40px;
-    max-width: 830px;
-    margin: 10px auto;
-    position: relative;
-	background: #fff;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-div.search-content input
-{
-    left: 15px;
-	width: 90%;
-	border: none;
-	height: 35px;
-	position: absolute;
-}
-
-div.search-content button
-{
-	top: -1px;
-	right: -1px;
-    border: none;
-    color: #fff;
-    font-size: 12px;
-    padding: 14px 50px;
-    position: absolute;
-    border-radius: 0 5px 5px 0;
-    background-color: #2e97fc;
 }
 
 /* main e nav */
@@ -196,17 +150,17 @@ main section.sub-section article div
 .image-destak
 {
     width: 100%;
-    height: 200px;
+    height: 450px;
     max-width: 980px;
     overflow: hidden;
-    margin: 30px auto;
+    margin: 130px auto 20px;
     position: relative;
 }
 
-.image-destak
+.image-destak h2
 {
-    max-width: 980px;
-    height: 300px;
+    text-align: left;
+    margin-bottom: 10px;
 }
 
 .image-destak .destakInner
@@ -236,50 +190,34 @@ main section.sub-section article div
 
 .image-destak .destakInner div span
 {
-    width: 465px;
+    width: 265px;
     background-color: #fff;
-}
-
-.image-destak p.event-name
-{
-    margin-top: 60px;
 }
 
 .image-destak button
 {
-    width: 275px;
+	border: none;
+    width: 100px;
     padding: 10px;
     font-size: 10px;
-    margin-top: 50px;
+    margin-top: 15px;
+    color: #ffffff;
 	border-radius: 5px;
-	border-style: groove;
-    background: #ffffff;
+    background: #2e97fc;
 }
 
 .image-destak .calendar
 {
-    width: 60px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 20px;
+    width: fit-content;
     border: 1px solid rgba(0,0,0,0.2);
-    border-radius: 5px;
-    position: absolute;
 }
 
 .image-destak .calendar p
 {
-    color: #fff;
+    padding: 5px;
     font-size: 12px;
-    background: #ea4a4b;
-    border-radius: 5px 5px 0 0;
-}
-
-.image-destak .calendar p:nth-child(2)
-{
-    font-size: 22px;
-    color: #50525f;
-    border-radius: 5px;
-    background: #fff;
 }
 
 .prev i,

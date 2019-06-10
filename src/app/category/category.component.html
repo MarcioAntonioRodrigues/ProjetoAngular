@@ -11,9 +11,9 @@
 	<div class="category-list">
 		<section *ngFor="let item of listaCategoria">
 			<span (click)="goToEvent(item)">
-				<img src="{{item.img}}" alt="{{item.titulo}}" title="{{item.titulo}}">
-				<p>{{item.dia}}<span> {{item.mes}} {{item.hora}}</span></p>
-				<p>{{item.titulo}}</p>
+				<img src="http://image.tmdb.org/t/p/w185/{{item.poster_path}}" alt="{{item.title}}" title="{{item.title}}">
+				<p>{{item.title}}</p>
+				<p>{{item.genres[0].name}}<span>1{{item.id.toString().substring(0, 1)}}anos</span></p>
 			</span>
 		</section>
 	</div>

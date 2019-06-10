@@ -15,8 +15,6 @@ export class DetailComponent implements OnInit
 	evento: any;
 	locais = [];
 	weekDay = [];
-	pecas: any = [];
-	filmes: any = [];
 	chosenDay = 0;
 	eventdate = new Date().toLocaleDateString();
 	purchase: any = 
@@ -33,8 +31,6 @@ export class DetailComponent implements OnInit
 				private location: Location,
 				private sessionService: SessionService)
 	{
-		this.filmes = eventsService.jsonList;
-		this.pecas = eventsService.pecas;
 		this.weekDay = [
 			'DOM',
 			'SEG',

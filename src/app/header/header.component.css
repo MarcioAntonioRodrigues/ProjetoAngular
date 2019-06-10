@@ -14,18 +14,56 @@ section
 {
 	top: 0;
 	width: 100%;
-	height: 80px;
+	height: 100px;
 	z-index: 999;
 	position: fixed;
 	background: #ffffff;
 	box-shadow: 0 1px 1px 1px lightgrey;
 }
 
-ul
+article
 {
-	top: 30px;
-	right: 100px;
+	width: 100%;
+	display: flex;
+	margin: 0 auto;
+	max-width: 980px;
+}
+
+article:nth-child(2)
+{
+	margin-top: 15px;
+	justify-content: space-between;
+}
+div.search
+{
+	height: 30px;
+    width: 530px;
+    position: relative;
+	background: #fff;
+	border-radius: 5px;
+	margin-top: 16px;
+    border: 1px solid #ccc;
+}
+
+div.search input
+{
+	width: 95%;
+	height: 24px;
+	border: none;
+	margin-left: 5px;
+}
+
+div.search button
+{
+	top: -1px;
+	right: -1px;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    padding: 8.5px 30px;
 	position: absolute;
+    border-radius: 0 5px 5px 0;
+    background-color: #2e97fc;
 }
 
 li
@@ -42,14 +80,12 @@ li i
 
 div.logo
 {
-	top: 15px;
-	left: 100px;
-	position: absolute;
+	margin-top: 15px;
 }
 
 div.logo img
 {
-	width:180px;
+	width:150px;
 }
 
 div.logo p
@@ -80,7 +116,7 @@ li.user-name:before
 
 p.logout
 {
-	top: 25px;
+	top: 90px;
 	display: none;
 	color: #ffffff;
 	margin-left: 30px;
@@ -91,7 +127,8 @@ p.logout
 	border-radius: 5px;
 }
 
-p.logout:before
+p.logout:before,
+ul.movies-menu::before
 {
 	content: "";
     width: 0;
@@ -104,6 +141,32 @@ p.logout:before
 }
 
 li.user-name:hover p.logout
+{
+	display: block;
+}
+
+ul.movies-menu
+{
+	top: 90px;
+	display: none;
+	color: #ffffff;
+	margin-left: -30px;
+	padding: 10px;
+	position: absolute;
+	background: #2e97fc;
+	border-radius: 5px;
+}
+
+ul.movies-menu li
+{
+	display: block;
+	color: #ffffff;
+	text-align: left;
+	margin-left: 0px;
+}
+
+
+li.movies:hover ul.movies-menu
 {
 	display: block;
 }

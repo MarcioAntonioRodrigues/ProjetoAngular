@@ -78,31 +78,37 @@ div.category-list span
 div.category-list section
 {
 	display: inline-block;
-	margin-bottom: 50px;
+    margin-bottom: 50px;
+    width: 245px;
 }
 
 div.category-list section img
 {
-	width: 300px;
+	width: 232px;
 	height: 350px;
-	margin: 0 13px;
+	margin: 0 5px;
     border-radius: 10px;
 }
 
 div.category-list section p
 {
-	margin: 0 20px;
+    margin: 0 20px;
+    overflow: hidden;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     border-bottom: 1px solid rgba(0,0,0,.3);
 }
 
 div.category-list section p:last-child
 {
 	border-bottom: none;
-	font-weight: 500;
+	font-weight: normal;
 }
 
 div.category-list section p span
 {
+    float: right;
 	font-size: 12px;
     color: #2e97fc;
 }

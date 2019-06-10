@@ -1,31 +1,51 @@
 <section>
-	<div class="logo">
-		<a [routerLink]="['/home']">
-			<img src="assets/img/icon.svg" alt="">
-		</a>
-	</div>
-	<ul>
-		<li>
-			Fale conosco
-		</li>
-		<li *ngIf="username === null" [routerLink]="['/']">
-			Login
-		 </li>
-		 <li *ngIf="username !== null" class="user-name">
-			<i class="fa fa-user"></i>
-			{{username}}
-			<p *ngIf="username" (click)="logout()" class="logout">
-				Sair
-			</p>
-		 </li>
-		 <!-- <li *ngIf="username" (click)="logout()" class="logout">
-			 Sair
-		 </li> -->
-		<li [routerLink]="['/']">
-			Criar conta
-		 </li>
-		<li>
-			<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-		</li>
-	</ul>
+	<article>
+		<div class="logo">
+			<a [routerLink]="['/home']">
+				<img src="assets/img/icon.svg" alt="">
+			</a>
+		</div>
+		<div class="search">
+			<input type="search">
+			<button>BUSCAR</button>
+		</div>
+	</article>
+	<article>
+		<div>
+			<ul>
+				<li class="movies">
+					Filmes
+					<ul class="movies-menu">
+						<li (click)="goToEvent('acao')">Ação</li>
+						<li>Aventura</li>
+						<li>Humor</li>
+						<li (click)="goToEvent('destaques')">Destaques</li>
+					</ul>
+				</li>
+				<li>Séries</li>
+				<li>Trailers</li>
+				<li>Cinemas</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li *ngIf="username === null" [routerLink]="['/']">
+					Login
+				 </li>
+				 <li *ngIf="username !== null" class="user-name">
+					<i class="fa fa-user"></i>
+					{{username}}
+					<p *ngIf="username" (click)="logout()" class="logout">
+						Sair
+					</p>
+				 </li>
+				<!-- <li [routerLink]="['/']">
+					Criar conta
+				 </li> -->
+				<!-- <li>
+					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+				</li> -->
+			</ul>
+		</div>
+	</article>
 </section>

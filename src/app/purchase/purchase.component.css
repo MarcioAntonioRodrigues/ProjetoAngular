@@ -14,7 +14,7 @@ main div
 main div section.left-side
 {
     width: 350px;
-    padding-top: 100px;
+    padding-top: 130px;
     background: #f8f8f8;
     box-shadow: 1px -5px 10px 0px gray;
 }
@@ -32,7 +32,7 @@ main div section.left-side img
 main div section.left-side article
 {
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 10px;
     display: inline-block;
 }
 

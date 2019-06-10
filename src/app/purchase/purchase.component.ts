@@ -16,10 +16,8 @@ export class PurchaseComponent implements OnInit
 	kmVtg = 0;
 	total = 0;
 	inteira = 0;
-	selectMeia = 0;
     purchase: any;
-    pecas: any = [];
-    filmes: any = [];
+	selectMeia = 0;
 	selectedCard:any;
 	selectInteira = 0;
 	selectVantagem = 0;
@@ -38,8 +36,6 @@ export class PurchaseComponent implements OnInit
                 private route: ActivatedRoute,
                 private sessionService: SessionService)
     {
-        this.filmes = eventsService.jsonList;
-		this.pecas = eventsService.pecas;
 		this.creditCard.year = "Ano";
     }
 

@@ -11,17 +11,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CategoryComponent implements OnInit
 {
 	
-	filmes:any = [];
-	pecas: any = [];
+	bestMovies:any = [];
+	actionMovies: any = [];
 	titulo = "";
 	categoria: any;
 	listaCategoria = [];
-	eventsService:EventsService;
 
-	constructor(eventsService:EventsService, private route: ActivatedRoute, private router: Router)
+	constructor(private eventsService:EventsService, private route: ActivatedRoute, private router: Router)
 	{
-		this.filmes = eventsService.filmes;
-		this.pecas = eventsService.pecas;
 	}
 
 	ngOnInit(): void 
@@ -29,20 +26,24 @@ export class CategoryComponent implements OnInit
 		this.route.params.subscribe((obj)=>{
 			this.categoria = obj.categoria;
 		});
+		console.log(this.categoria)
+		this.eventsService.getMoviesListByCategory(this.categoria);
+		this.bestMovies = this.eventsService.bestJsonList;
+		this.actionMovies = this.eventsService.actionJsonList;
 		this.getCategoria();
 	}
 
 	getCategoria()
 	{
-		if(this.categoria == 'cinema')
+		if(this.categoria == 'destaques')
 		{
-			this.listaCategoria = this.filmes;
-			this.titulo = "Filmes em cartaz";
+			this.listaCategoria = this.bestMovies;
+			this.titulo = "Filmes em Destaque";
 		}
-		if(this.categoria == 'teatro')
+		if(this.categoria == 'acao')
 		{
-			this.listaCategoria = this.pecas;
-			this.titulo = "Teatro";
+			this.listaCategoria = this.actionMovies;
+			this.titulo = "Filmes de Ação em destaque";
 		}
 	}
 

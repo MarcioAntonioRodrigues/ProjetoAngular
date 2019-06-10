@@ -6,8 +6,8 @@
 		<article *ngFor="let caroussel of carousselItems">
 			<span (click)="goToEvent(caroussel)">
 				<img src="http://image.tmdb.org/t/p/w185/{{caroussel.poster_path}}" alt="">
-				<p>{{caroussel.title}}<span>{{caroussel.genres[0].id}}anos</span></p>
-				<p>{{caroussel.genres[0].name}}</p>
+				<p>{{caroussel.title}}</p>
+				<p>{{caroussel.genres[0].name}}<span>1{{caroussel.id.toString().substring(0, 1)}} anos</span></p>
 			</span>
 		</article>
 	</div>

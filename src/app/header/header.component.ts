@@ -25,4 +25,9 @@ export class HeaderComponent implements OnInit
 		return this.router.navigate(['/']);
 	}
 
+	goToEvent(categoria)
+	{
+		this.router.navigate(['/categorias', categoria]);
+	}
+
 }

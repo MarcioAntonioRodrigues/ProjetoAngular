@@ -1,50 +1,17 @@
 <section class="principal">
-	<article class="search-area">
-		<h1>Seu evento preferido ao alcance de um clique.</h1>
-		<div class="search-content">
-			<input type="search" placeholder="Pesquisar eventos">
-			<button>BUSCAR</button>
-		</div>
-	</article>
-	<article class="eventos">
-		<ul>
-			<li (click)="goToEvent('shows')">
-				<i class="fa fa-music"></i>
-				<p>Shows</p>
-			</li>
-			<li (click)="goToEvent('teatro')">
-				<img src="../assets/icons/theatre.svg" alt="">
-				<p>Teatro</p>
-			</li>
-			<li (click)="goToEvent('gastronomia')">
-				<i class="fa fa-cutlery" aria-hidden="true"></i>
-				<p>Gastronomia</p>
-			</li>
-			<li (click)="goToEvent('cinema')">
-				<i class="fa fa-film" aria-hidden="true"></i>
-				<p>Cinema</p>
-			</li>
-			<li (click)="goToEvent('esportes')">
-				<i class="fa fa-futbol-o" aria-hidden="true"></i>
-				<p>Esportes</p>
-			</li>
-			<li (click)="goToEvent('destaques')">
-				<i class="fa fa-star" aria-hidden="true"></i>
-				<p>Destaques</p>
-			</li>
-		</ul>
-	</article>
 	<article class="image-destak">
+		<h2>Estréias da semana</h2>
 		<div class="destakInner">
 			<article *ngFor="let best of bestEvents">
 				<div>
 					<img src="{{best.img}}" alt="">
-					<span>
+					<!-- <span>
 						<h2>{{best.titulo}}</h2>
-						<article class="calendar"><p>{{best.mes}}</p><p>{{best.dia}}</p></article>
-						<p class="event-name">{{best.local}}</p>
+						<article class="calendar"><p>{{best.genero}}</p></article>
+						<article class="calendar"><p>Estréia {{best.data}}</p></article>
+						<article class="calendar"><p>Class.: {{best.classificacao}}</p></article>
 						<button>VER DETALHES</button>
-					</span>
+					</span> -->
 				</div>
 			</article>
 		</div>
@@ -55,10 +22,38 @@
 			<i class="fa fa-chevron-left"></i>
 		</div>
 	</article>
+	<!-- <article class="eventos"> -->
+		<!-- <ul>
+			<li (click)="goToEvent('acao')">
+				<img src="../assets/icons/actionMovie.svg" alt="">
+				<p>Ação</p>
+			</li>
+			<li (click)="goToEvent('comedia')">
+				<img src="../assets/icons/theatre.svg" alt="">
+				<p>Comédia</p>
+			</li>
+			<li (click)="goToEvent('romance')">
+				<i class="fa fa-cutlery" aria-hidden="true"></i>
+				<p>Romance</p>
+			</li>
+			<li (click)="goToEvent('suspense')">
+				<i class="fa fa-film" aria-hidden="true"></i>
+				<p>Suspense</p>
+			</li>
+			<li (click)="goToEvent('ficcao')">
+				<i class="fa fa-futbol-o" aria-hidden="true"></i>
+				<p>Ficção</p>
+			</li>
+			<li (click)="goToEvent('destaques')">
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<p>Destaques</p>
+			</li>
+		</ul>
+	</article> -->
 </section>
 <main>
-	<app-caroussel [carousselItems]="filmes" [titleCategory]="tituloFilmes"></app-caroussel>
-	<app-caroussel [carousselItems]="pecas" [titleCategory]="tituloPecas"></app-caroussel>
+	<app-caroussel [carousselItems]="bestMovies" [titleCategory]="tituloDestaques"></app-caroussel>
+	<app-caroussel [carousselItems]="actionMovies" [titleCategory]="tituloAcao"></app-caroussel>
 	<section class="sub-section">
 		<article>
 			<h2>Eventos</h2>

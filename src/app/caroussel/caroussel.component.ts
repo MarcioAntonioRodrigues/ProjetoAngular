@@ -21,7 +21,7 @@ export class CarousselComponent
 	ngOnInit()
 	{
 		this.caroussel(this.caroussels, 244, 'inner', 6000);
-		this.caroussel(this.destakImage, 987, 'destakInner', 5000);
+		this.caroussel(this.destakImage, 1000, 'destakInner', 5000);
 	}
 
 	caroussel(caroussel, tam, className, time)
