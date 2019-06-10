@@ -34,9 +34,24 @@ section.principal p span
 	background: #50525f;
 }
 
+section.principal p span.freeClass
+{
+	background: green;
+}
+
+section.principal p span.adultClass
+{
+	background: red;
+}
+
+section.principal p span.mediumClass
+{
+	background: #edcb0c;
+}
+
 section.principal p span:nth-child(2)
 {
-	color: #2e97fc;
+	color: #b5121b;
 	background: transparent;
 	margin-left: 5px;
 	font-weight: bold
@@ -72,11 +87,6 @@ section.principal div  ul li
 	margin: 10px 40px 10px 0;
 }
 
-section.principal div  ul li p
-{
-	color: #2e97fc;
-}
-
 section.principal div  ul li p:nth-child(1)
 {
 	font-size: 20px;
@@ -84,15 +94,16 @@ section.principal div  ul li p:nth-child(1)
 
 section.principal div  ul li p.selectedDay
 {
-	color: orange;
+	color: #b5121b;
 }
 
 /* section.descricao */
 
 section.descricao
 {
-	background: #f8f8f8;
 	width: 100%;
+	padding-bottom: 10px;
+	background: #dfdfdf;
 }
 
 section.descricao article
@@ -113,18 +124,18 @@ section.descricao article div ul li
     padding: 20px;
 	margin: 30px 0 0;
 	display: inline-block;
-	border: 1px solid rgba(0,0,0,.2);
+	border: 2px solid #ffffff;
 }
 
 section.descricao article div ul li h2
 {
-	color: #2e97fc;
+	color: #b5121b;
 }
 
 section.descricao article div ul li p:nth-child(2)
 {
 	padding-bottom: 5px;
-	border-bottom: 1px solid rgba(0,0,0,.2);
+	border-bottom: 2px solid #ffffff;
 }
 
 section.descricao article div ul li ul li
@@ -138,21 +149,23 @@ section.descricao article div ul li ul li
 
 section.descricao article div ul li ul li p
 {
-	padding-top: 5px;
+    font-weight: 500;
+	padding-top: 15px;
+    padding-bottom: 5px;
 }
 
 section.descricao article div ul li ul li button
 {
 	transition: .5s;
-	color: #2e97fc;
+	color: #b5121b;
 	padding: 10px 15px;
 	background: transparent;
-	border: 1px solid #2e97fc;
+	border: 1px solid #b5121b;
 }
 
 section.descricao article div ul li ul li button:hover
 {
 	color: #f8f8f8;
-	background: #2e97fc;
+	background: #b5121b;
 }
 

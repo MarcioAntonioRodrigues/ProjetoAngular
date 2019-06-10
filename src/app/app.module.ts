@@ -21,6 +21,7 @@ import { EventsService } from './services/events.service';
 import { DetailComponent } from './detail/detail.component';
 import { SessionService } from './services/session.service';
 import { PurchaseComponent } from './purchase/purchase.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PurchaseComponent } from './purchase/purchase.component';
 	PurchaseComponent,
 	CategoryComponent,
 	CarousselComponent,
+	SearchComponent
   ],
   imports: [
     BrowserModule,

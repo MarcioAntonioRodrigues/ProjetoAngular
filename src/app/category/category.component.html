@@ -1,11 +1,3 @@
-<section class="principal">
-    <article class="search-area">
-        <div class="search-content">
-            <input type="search" placeholder="Pesquisar eventos">
-            <button>BUSCAR</button>
-        </div>
-    </article>
-</section>
 <main>
 	<app-caroussel [carousselItems]="listaCategoria" [titleCategory]="titulo"></app-caroussel>
 	<div class="category-list">
@@ -13,7 +5,11 @@
 			<span (click)="goToEvent(item)">
 				<img src="http://image.tmdb.org/t/p/w185/{{item.poster_path}}" alt="{{item.title}}" title="{{item.title}}">
 				<p>{{item.title}}</p>
-				<p>{{item.genres[0].name}}<span>1{{item.id.toString().substring(0, 1)}}anos</span></p>
+				<p>{{item.genres[0].name}}<span [ngClass]="{'freeClass': item.id.toString().substring(0, 1) <= 2 ,
+															'mediumClass': item.id.toString().substring(0, 1) <= 6 && 
+															item.id.toString().substring(0, 1) > 2, 
+															'adultClass': item.id.toString().substring(0, 1) > 6}">
+					1{{item.id.toString().substring(0, 1)}}</span></p>
 			</span>
 		</section>
 	</div>

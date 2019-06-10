@@ -13,8 +13,8 @@ export class HomeComponent
 	bestMovies:any = [];
 	actionMovies: any = [];
 	bestEvents:any = [];
-	tituloAcao = "Em breve";
-	tituloDestaques = "Mais buscados";
+	tituloAcao = "EM CARTAZ";
+	tituloDestaques = "EM ALTA";
 	showMenuFooter: boolean;
 
 	constructor(private eventsService:EventsService, private router: Router)

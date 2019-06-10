@@ -7,7 +7,11 @@
 			<span (click)="goToEvent(caroussel)">
 				<img src="http://image.tmdb.org/t/p/w185/{{caroussel.poster_path}}" alt="">
 				<p>{{caroussel.title}}</p>
-				<p>{{caroussel.genres[0].name}}<span>1{{caroussel.id.toString().substring(0, 1)}} anos</span></p>
+				<p>{{caroussel.genres[0].name}}<span [ngClass]="{'freeClass': caroussel.id.toString().substring(0, 1) <= 2 ,
+																'mediumClass': caroussel.id.toString().substring(0, 1) <= 6 && 
+																caroussel.id.toString().substring(0, 1) > 2, 
+																'adultClass': caroussel.id.toString().substring(0, 1) > 6}">
+					1{{caroussel.id.toString().substring(0, 1)}}</span></p>
 			</span>
 		</article>
 	</div>

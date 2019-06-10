@@ -6,8 +6,8 @@
 			</a>
 		</div>
 		<div class="search">
-			<input type="search">
-			<button>BUSCAR</button>
+			<input type="search" [(ngModel)]="searchName">
+			<button (click)="searchMovie(searchName)">Buscar</button>
 		</div>
 	</article>
 	<article>

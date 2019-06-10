@@ -14,7 +14,7 @@ main div
 main div section.left-side
 {
     width: 350px;
-    padding-top: 130px;
+    padding-top: 120px;
     background: #f8f8f8;
     box-shadow: 1px -5px 10px 0px gray;
 }
@@ -23,7 +23,7 @@ main div section.left-side img
 {
     width: 100px;
     height: 150px;
-    margin-top: -90px;
+    margin-top: -100px;
     margin-left: 20px;
     margin-bottom: 10px;
     box-shadow: 5px 5px 5px -3px rgba(0,0,0,.5);
@@ -39,7 +39,7 @@ main div section.left-side article
 main div section.left-side article p,
 main div section.left-side article h3
 {
-    margin-bottom: 10px;
+    margin: 20px 0;
 }
 
 main div section.left-side article p,
@@ -108,7 +108,8 @@ main div section.left-side article.bt-change i
 main div section.left-side article.resumo-pedido
 {
     width: 100%;
-    margin-left: 0;
+	margin-left: 0;
+	padding-bottom: 50px;
 }
 
 main div section.left-side article.resumo-pedido div
@@ -116,6 +117,11 @@ main div section.left-side article.resumo-pedido div
 	width: 95%;
     padding: 10px 0;
     border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+main div section.left-side article.resumo-pedido div i
+{
+	margin-top: 20px;
 }
 
 main div section.left-side article.resumo-pedido div div
@@ -154,7 +160,7 @@ main div section.left-side article.resumo-pedido div span i
 main div section.right-side
 {
     width: 630px;
-    padding-top: 100px;
+    padding-top: 150px;
     padding-left: 20px;
 }
 
@@ -213,7 +219,7 @@ h3.card-data
 
 article.card-info
 {
-    width: 300px;
+	width: 300px;
     margin: 20px;
 }
 

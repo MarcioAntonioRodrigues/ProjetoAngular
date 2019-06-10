@@ -36,8 +36,8 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-    line-height: 1;
-    background: #f8f8f8;
+	line-height: 1;
+	background: #dee3eb;
 }
 
 ol, ul {
@@ -371,8 +371,8 @@ textarea {
 h1, h2, h3, h4, li, a, p
 {
 	font-family: 'Roboto', sans-serif;
-    line-height: 1.5;
-    color: #50525f;
+    line-height: 1.2;
+    color: gray;
 }
 h1
 {
@@ -381,8 +381,9 @@ h1
 }
 h2
 {
+	font-size: 20px;
+	color: #b5121b;
 	font-weight: bold;
-	font-size: 24px;
 }
 
 body 

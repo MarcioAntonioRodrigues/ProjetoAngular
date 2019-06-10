@@ -17,9 +17,9 @@ export class EventsService
         "299536","287947","118340","127585","399579","246655","122917","335983"]
 	bestMoviesList = ["420817", "5241", '238', '278', '424', '299534', '497', '550'];
     locales = [
-        { cinema: 'São Luís Lgo do Machado', endereco: 'Lgo. do Machado, 161.', horarios: ['12:00', '15:00' , '17:00', '19:00', '22:00']}, 
-        { cinema: 'Knoplex Tijuca', endereco: 'Shopping Tijuca, 188.', horarios: ['12:00', '15:00' , '17:00']}, 
-        { cinema: 'Cinemark Rio Sul', endereco: 'Shopping Rio Sul, 123.', horarios: [ '12:00', '15:00' , '17:00']}
+		{ cinema: 'Knoplex Tijuca', endereco: 'Shopping Tijuca, 188.', horarios: ['12:00', '15:00' , '17:00']}, 
+        { cinema: 'Cinemark Rio Sul', endereco: 'Shopping Rio Sul, 123.', horarios: [ '12:00', '15:00' , '17:00']},
+        { cinema: 'São Luís Lgo do Machado', endereco: 'Lgo. do Machado, 161.', horarios: ['12:00', '15:00' , '17:00', '19:00', '22:00']}
     ];
 
     constructor(private http: Http)
