@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { EventsService } from '../services/events.service';
 import { Router } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 	styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent 
+export class HomeComponent implements OnInit
 {
 	bestMovies:any = [];
 	actionMovies: any = [];
@@ -19,11 +19,16 @@ export class HomeComponent
 
 	constructor(private eventsService:EventsService, private router: Router)
 	{
+		
+	}
+
+	ngOnInit(): void 
+	{
 		this.eventsService.getMoviesListByCategory("destaques");
 		this.eventsService.getMoviesListByCategory("acao");
-		this.bestMovies = eventsService.bestJsonList;
-		this.actionMovies = eventsService.actionJsonList;
-		this.bestEvents = eventsService.bestEvents;
+		this.bestMovies = this.eventsService.bestJsonList;
+		this.actionMovies = this.eventsService.actionJsonList;
+		this.bestEvents = this.eventsService.bestEvents;
 	}
 
 	goToEvent(categoria)

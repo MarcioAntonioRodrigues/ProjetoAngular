@@ -10,32 +10,36 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class SearchComponent implements OnInit
 {
-	searchMovies = [];
+	moviesList = [];
+	searchName = '';
+	searchList = [];
 
-	constructor(private eventsService: EventsService, private route: ActivatedRoute)
+	constructor(private eventsService: EventsService, private route: ActivatedRoute,  private router: Router)
 	{
-
 	}
 
 	ngOnInit()
 	{
+		this.eventsService.getMoviesListByCategory("destaques");
+		this.eventsService.getMoviesListByCategory("acao");
+		this.moviesList = this.eventsService.actionJsonList;
 		this.route.params.subscribe((obj)=>
 		{
-			this.categoria = obj.categoria;
-			this.eventsService.getMoviesListByCategory(this.categoria);
-			this.bestMovies = this.eventsService.bestJsonList;
-			this.actionMovies = this.eventsService.actionJsonList;
-			this.getCategoria();
+			this.searchName = obj.busca;
+			setTimeout(() => {
+				this.searchMovie(this.searchName);
+			}, 100);
 		});
 	}
 
 	searchMovie(search)
 	{
-		this.moviesList.forEach(movie=>{
+		this.searchList = [];
+		this.moviesList.forEach(movie=>
+		{
 			if(movie.title.toLowerCase().includes(search.toLowerCase()))
 			{
 				this.searchList.push(movie);
-				console.log(this.searchList);
 			}
 			else
 			{
@@ -44,4 +48,9 @@ export class SearchComponent implements OnInit
 		})
 	}
 
+	goToEvent(evento)
+	{
+		this.router.navigate(['/detalhes'], 
+		{queryParams: evento});
+	}
 }

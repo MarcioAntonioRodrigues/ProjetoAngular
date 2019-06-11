@@ -1,0 +1,18 @@
+<main>
+    <div class="category-list">
+        <h2>
+           {{searchList.length > 0 ? 'Resultados da busca': 'Não foi encontrado nenhum resultado'}}
+        </h2>
+        <section *ngFor="let item of searchList">
+            <span (click)="goToEvent(item)">
+                <img src="http://image.tmdb.org/t/p/w185/{{item.poster_path}}" alt="{{item.title}}" title="{{item.title}}">
+                <p>{{item.title}}</p>
+                <p>{{item.genres[0].name}}<span [ngClass]="{'freeClass': item.id.toString().substring(0, 1) <= 2 ,
+                                                            'mediumClass': item.id.toString().substring(0, 1) <= 6 && 
+                                                            item.id.toString().substring(0, 1) > 2, 
+                                                            'adultClass': item.id.toString().substring(0, 1) > 6}">
+                    1{{item.id.toString().substring(0, 1)}}</span></p>
+            </span>
+        </section>
+    </div>
+</main>

@@ -12,19 +12,12 @@ import { EventsService } from '../services/events.service';
 export class HeaderComponent implements OnInit
 {
 	username = '';
-	moviesList = [];
-	searchName = '';
-	searchList = [];
 
 	constructor(private sessionService: SessionService, private router: Router, private eventsService: EventsService){}
 
 	ngOnInit(): void 
 	{
 		this.username = this.sessionService.getUserName();
-		this.eventsService.getMoviesListByCategory("destaques");
-		this.eventsService.getMoviesListByCategory("acao");
-		this.moviesList = this.eventsService.actionJsonList;
-		console.log(this.moviesList)
 	}
 
 	logout()
@@ -38,24 +31,9 @@ export class HeaderComponent implements OnInit
 		this.router.navigate(['/categorias', categoria]);
 	}
 
-	searchMovie(search)
+	goToSearchEvent(search)
 	{
-		this.moviesList.forEach(movie=>{
-			if(movie.title.toLowerCase().includes(search.toLowerCase()))
-			{
-				this.searchList.push(movie);
-				console.log(this.searchList);
-			}
-			else
-			{
-				console.log("Não achou")
-			}
-		})
-	}
-
-	goToSearchEvent(categoria)
-	{
-		this.router.navigate(['/categorias', categoria]);
+		this.router.navigate(['/busca', search]);
 	}
 
 }

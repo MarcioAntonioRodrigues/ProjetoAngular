@@ -7,7 +7,7 @@
 		</div>
 		<div class="search">
 			<input type="search" [(ngModel)]="searchName">
-			<button (click)="searchMovie(searchName)">Buscar</button>
+			<button (click)="goToSearchEvent(searchName)">Buscar</button>
 		</div>
 	</article>
 	<article>
@@ -39,12 +39,6 @@
 						Sair
 					</p>
 				 </li>
-				<!-- <li [routerLink]="['/']">
-					Criar conta
-				 </li> -->
-				<!-- <li>
-					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-				</li> -->
 			</ul>
 		</div>
 	</article>
