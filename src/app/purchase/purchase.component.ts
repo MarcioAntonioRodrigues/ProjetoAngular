@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsService } from '../services/events.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SessionService } from '../services/session.service';
 import { MatDialog } from '@angular/material';
 import { DialogComponent } from './dialog.component';
@@ -39,17 +39,20 @@ export class PurchaseComponent implements OnInit
 	animal: any;
 	eventsService: EventsService;
 	cardYear = ['Jan', 'Fev', 'Mar'];
+	username = '';
     
     constructor(eventsService:EventsService, 
                 private route: ActivatedRoute,
 				private sessionService: SessionService,
-				public dialog: MatDialog)
+				public dialog: MatDialog,
+				private router: Router)
     {
 		this.creditCard.year = "Ano";
     }
 
     ngOnInit()
     {
+		this.username = this.sessionService.getUserName();
 		this.purchase = this.sessionService.getPurchase();
 		// this.creditCard.year = "Ano";
 		console.log(this.creditCard.year)
@@ -75,17 +78,23 @@ export class PurchaseComponent implements OnInit
 		this.total = this.inteira + this.meia + this.kmVtg;
 		console.log(this.total);
 		console.log(this.creditCard)
+		this.openDialog();
 	}
 
 	openDialog(): void {
-		const dialogRef = this.dialog.open(DialogComponent, {
-		  width: '550px',
-		  data: {name: "nome:", animal: "Cahorro"}
+			const dialogRef = this.dialog.open(DialogComponent, {
+			width: '550px',
+			data: {name: this.username, 
+					meia: this.meia, totalMeia: this.selectMeia,
+					inteira: this.inteira, totalInteira: this.selectInteira,
+					kmVtg: this.kmVtg, totalKmVtg: this.selectVantagem,
+					total: this.total}
 		});
 	
 		dialogRef.afterClosed().subscribe(result => {
-		  console.log('The dialog was closed');
-		  this.animal = result;
+			this.router.navigate(['/home']);
+			console.log('The dialog was closed');
+			this.animal = result;
 		});
 	  }
 

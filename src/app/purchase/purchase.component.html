@@ -156,7 +156,7 @@
 							<input required placeholder="CVV" name="cardCVV" [(ngModel)]="creditCard.cvv" type="text" maxlength="3">
 						</div>
 						<article>
-							<button mat-flat-button type="submit" [disabled]="!payForm.form.valid" (click)="openDialog()">
+							<button mat-flat-button type="submit" [disabled]="!payForm.form.valid">
 								PAGAMENTO
 							</button>
 						</article>
