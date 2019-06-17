@@ -147,7 +147,7 @@
 								<option value="FEV">Fev</option>
 								<option value="MAR">Mar</option>
 							</select>
-							<select required name="cardYear" [(ngModel)]="creditCard.year" id="">
+							<select name="cardYear" [(ngModel)]="creditCard.year" id="">
 								<option value="" disabled selected>Ano</option>
 								<option *ngFor="let yer of cardYear">
 									{{year}}
@@ -156,7 +156,7 @@
 							<input required placeholder="CVV" name="cardCVV" [(ngModel)]="creditCard.cvv" type="text" maxlength="3">
 						</div>
 						<article>
-							<button mat-flat-button type="submit" [disabled]="!payForm.form.valid">
+							<button mat-flat-button type="submit" [disabled]="!payForm.form.valid" (click)="openDialog()">
 								PAGAMENTO
 							</button>
 						</article>

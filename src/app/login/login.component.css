@@ -79,3 +79,11 @@ section.principal article p a
     margin-top: 10px;
     background: #b5121b;
 }
+
+@media screen and (max-width: 600px) 
+{
+    section.principal
+    {
+        left: 0
+    }
+}

@@ -2,6 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { EventsService } from '../services/events.service';
 import { ActivatedRoute } from '@angular/router';
 import { SessionService } from '../services/session.service';
+import { MatDialog } from '@angular/material';
+import { DialogComponent } from './dialog.component';
+
+export interface DialogData {
+	animal: string;
+	name: string;
+  }
 
 @Component({
 	selector: 'app-purchase',
@@ -29,12 +36,14 @@ export class PurchaseComponent implements OnInit
 		month: null,
 		year: ""
 	}
+	animal: any;
 	eventsService: EventsService;
 	cardYear = ['Jan', 'Fev', 'Mar'];
     
     constructor(eventsService:EventsService, 
                 private route: ActivatedRoute,
-                private sessionService: SessionService)
+				private sessionService: SessionService,
+				public dialog: MatDialog)
     {
 		this.creditCard.year = "Ano";
     }
@@ -53,7 +62,6 @@ export class PurchaseComponent implements OnInit
 	
 	calcTicket()
 	{
-		debugger
 		let vtg = 12;
 		let halph = 14;
 		this.total = 0;
@@ -68,5 +76,17 @@ export class PurchaseComponent implements OnInit
 		console.log(this.total);
 		console.log(this.creditCard)
 	}
+
+	openDialog(): void {
+		const dialogRef = this.dialog.open(DialogComponent, {
+		  width: '550px',
+		  data: {name: "nome:", animal: "Cahorro"}
+		});
+	
+		dialogRef.afterClosed().subscribe(result => {
+		  console.log('The dialog was closed');
+		  this.animal = result;
+		});
+	  }
 
 }

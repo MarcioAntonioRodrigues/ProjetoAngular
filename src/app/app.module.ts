@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +22,7 @@ import { EventsService } from './services/events.service';
 import { DetailComponent } from './detail/detail.component';
 import { SessionService } from './services/session.service';
 import { PurchaseComponent } from './purchase/purchase.component';
+import { DialogComponent } from './purchase/dialog.component';
 import { SearchComponent } from './search/search.component';
 
 @NgModule({
@@ -34,21 +36,26 @@ import { SearchComponent } from './search/search.component';
 	PurchaseComponent,
 	CategoryComponent,
 	CarousselComponent,
-	SearchComponent
+	SearchComponent,
+	DialogComponent
   ],
   imports: [
     BrowserModule,
-		AppRoutingModule,
-		BrowserAnimationsModule,
-		MatButtonModule,
-		MatInputModule,
-		FormsModule,
-		HttpModule
+	AppRoutingModule,
+	BrowserAnimationsModule,
+	MatButtonModule,
+	MatInputModule,
+	FormsModule,
+	HttpModule,
+	MatDialogModule
+  ],
+  entryComponents: [
+    DialogComponent
   ],
   providers: [
-		AuthService,
-		EventsService,
-		SessionService
+	AuthService,
+	EventsService,
+	SessionService
 	],
   bootstrap: [AppComponent]
 })
