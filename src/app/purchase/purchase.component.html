@@ -147,9 +147,9 @@
 								<option value="FEV">Fev</option>
 								<option value="MAR">Mar</option>
 							</select>
-							<select name="cardYear" [(ngModel)]="creditCard.year" id="">
+							<select required name="cardYear" [(ngModel)]="creditCard.year" id="">
 								<option value="" disabled selected>Ano</option>
-								<option *ngFor="let yer of cardYear">
+								<option *ngFor="let year of cardYear">
 									{{year}}
 								</option>
 							</select>

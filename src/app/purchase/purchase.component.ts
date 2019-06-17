@@ -40,6 +40,7 @@ export class PurchaseComponent implements OnInit
 	eventsService: EventsService;
 	cardYear = ['Jan', 'Fev', 'Mar'];
 	username = '';
+	releasedView = false;
     
     constructor(eventsService:EventsService, 
                 private route: ActivatedRoute,
@@ -60,7 +61,17 @@ export class PurchaseComponent implements OnInit
 
     changeView(val)
     {
-        this.view = val;
+		console.log(this.selectInteira)
+		if(this.selectInteira == 0 && this.selectMeia == 0 && this.selectVantagem == 0)
+		{
+			this.view = 0;
+			this.releasedView = false;
+		} 
+		else
+		{
+			this.view = val;
+			this.releasedView = true;
+		}
 	}
 	
 	calcTicket()
