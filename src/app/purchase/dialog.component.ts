@@ -12,9 +12,9 @@ export interface DialogData {
   <div mat-dialog-content>
 	<p>Sua compra foi realizada com sucesso!</p>
 	<p>Ingressos comprados:</p>
-	<p *ngIf='data.totalInteira > 0'>{{data.totalInteira}} X Inteira: {{data.inteira}} reais</p>
-	<p *ngIf='data.totalMeia > 0'>{{data.totalMeia}} X Meia: {{data.meia}} reais</p>
-	<p *ngIf='data.totalKmVtg > 0'>{{data.totalKmVtg}} X Km Vantagens Ipiranga: RS{{data.kmVtg}} reais</p>
+	<p *ngIf='data.totalInteira > 0'>Inteira - {{data.totalInteira}} ingressos / total: {{data.inteira}} reais</p>
+	<p *ngIf='data.totalMeia > 0'>Meia - {{data.totalMeia}} ingressos / total: {{data.meia}} reais</p>
+	<p *ngIf='data.totalKmVtg > 0'>Km Vantagens Ipiranga - {{data.totalKmVtg}} ingressos / total :{{data.kmVtg}} reais</p>
 	<p>Total da compra: {{data.total}} reais</p>
   </div>
   <div mat-dialog-actions>

@@ -38,7 +38,7 @@ export class PurchaseComponent implements OnInit
 	}
 	animal: any;
 	eventsService: EventsService;
-	cardYear = ['Jan', 'Fev', 'Mar'];
+	cardYear = ['2017', '2018', '2019'];
 	username = '';
 	releasedView = false;
     

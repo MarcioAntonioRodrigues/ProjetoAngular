@@ -26,10 +26,11 @@ export class EventsService
     {
 		this.bestEvents = [
 			{ img:'assets/img/x-men.jpg', data: '07/04/2019', titulo:'X-MEN: FÊNIX NEGRA', genero:'Aventura', classificacao: '14 anos'},
+			{ img:'assets/img/alladin.jpg', data: '07/04/2019', titulo:'X-MEN: FÊNIX NEGRA', genero:'Aventura', classificacao: '14 anos'},
+			{ img:'assets/img/super-man.jpg', data: '07/04/2019', titulo:'X-MEN: FÊNIX NEGRA', genero:'Aventura', classificacao: '14 anos'},
 			{ img:'assets/img/x-men.jpg', data: '07/04/2019', titulo:'X-MEN: FÊNIX NEGRA', genero:'Aventura', classificacao: '14 anos'},
-			{ img:'assets/img/x-men.jpg', data: '07/04/2019', titulo:'X-MEN: FÊNIX NEGRA', genero:'Aventura', classificacao: '14 anos'},
-			{ img:'assets/img/x-men.jpg', data: '07/04/2019', titulo:'X-MEN: FÊNIX NEGRA', genero:'Aventura', classificacao: '14 anos'},
-			{ img:'assets/img/x-men.jpg', data: '07/04/2019', titulo:'X-MEN: FÊNIX NEGRA', genero:'Aventura', classificacao: '14 anos'}
+			{ img:'assets/img/alladin.jpg', data: '07/04/2019', titulo:'X-MEN: FÊNIX NEGRA', genero:'Aventura', classificacao: '14 anos'}
+			
 		]
 	}
     
